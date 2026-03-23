@@ -2,32 +2,40 @@ using UnityEngine;
 
 public class LiftPlatform : MonoBehaviour
 {
-    public float height = 5f;
+    public Transform downPoint;
+    public Transform upPoint;
+
     public float speed = 2f;
 
-    private bool activated = false;
-    private Vector3 startPos;
-    private Vector3 targetPos;
-
-    void Start()
-    {
-        startPos = transform.position;
-        targetPos = startPos + Vector3.up * height;
-    }
+    private Vector3 target;
+    private bool moving = false;
 
     void Update()
     {
-        if (activated)
+        if (moving)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                target,
+                speed * Time.deltaTime
+            );
+
+            if (Vector3.Distance(transform.position, target) < 0.01f)
+            {
+                moving = false;
+            }
         }
     }
 
-    public void ActivateLift()
+    public void MoveDown()
     {
-        if (!activated)
-        {
-            activated = true;
-        }
+        target = downPoint.position;
+        moving = true;
+    }
+
+    public void MoveUp()
+    {
+        target = upPoint.position;
+        moving = true;
     }
 }

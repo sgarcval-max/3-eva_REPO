@@ -4,18 +4,36 @@ public class BrokenGenerator : MonoBehaviour
 {
     public LiftPlatform platform;
 
-    private bool repaired = false;
+    private bool playerInside = false;
+    private int state = 0;
 
-    public void Repair()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        repaired = true;
+        if (other.CompareTag("Player"))
+            playerInside = true;
     }
 
-    public void GiveEnergy()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (repaired)
+        if (other.CompareTag("Player"))
+            playerInside = false;
+    }
+
+    public void Interact()
+    {
+        if (!playerInside) return;
+
+        Debug.Log("Interactuó con BrokenGenerator");
+
+        if (state == 0)
         {
-            platform.ActivateLift();
+            platform.MoveDown();
+            state = 1;
+        }
+        else if (state == 1)
+        {
+            platform.MoveUp();
+            state = 2;
         }
     }
 }

@@ -26,7 +26,7 @@ public class EnergyGenerator : MonoBehaviour
     {
         if (playerInside)
         {
-            platform.ActivateLift();
+            platform.MoveUp(); // aquí cambiamos ActivateLift por MoveUp
         }
     }
 }
