@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 175185836}
   - component: {fileID: 175185835}
   - component: {fileID: 175185834}
+  - component: {fileID: 175185837}
   m_Layer: 5
   m_Name: MagnetSelector
   m_TagString: Untagged
@@ -145,7 +146,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175185832}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -173,8 +174,9 @@ MonoBehaviour:
   - {fileID: 1029461726}
   - {fileID: 1019171870}
   - {fileID: 1361400960}
-  moveSpeed: 10
   selector: {fileID: 175185833}
+  moveSpeed: 10
+  canSelect: 0
 --- !u!114 &175185835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +215,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175185832}
   m_CullTransparentMesh: 1
+--- !u!225 &175185837
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175185832}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &191666437
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +687,7 @@ GameObject:
   - component: {fileID: 1019171867}
   - component: {fileID: 1019171866}
   - component: {fileID: 1019171870}
+  - component: {fileID: 1019171871}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -798,7 +813,23 @@ MonoBehaviour:
   attractSpeed: 5
   offsetX: 100
   maxRotation: 10
+  menuController: {fileID: 175185834}
   isSelected: 0
+--- !u!114 &1019171871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019171864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb8fa6008a8e1b40b7e99b3388efc74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
+  startScale: 0
+  isFinished: 0
 --- !u!1 &1029461720
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +843,7 @@ GameObject:
   - component: {fileID: 1029461723}
   - component: {fileID: 1029461722}
   - component: {fileID: 1029461726}
+  - component: {fileID: 1029461727}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -949,7 +981,23 @@ MonoBehaviour:
   attractSpeed: 5
   offsetX: 100
   maxRotation: 10
+  menuController: {fileID: 175185834}
   isSelected: 0
+--- !u!114 &1029461727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029461720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb8fa6008a8e1b40b7e99b3388efc74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
+  startScale: 0
+  isFinished: 0
 --- !u!1 &1176587490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,6 +1224,7 @@ GameObject:
   - component: {fileID: 1361400957}
   - component: {fileID: 1361400956}
   - component: {fileID: 1361400960}
+  - component: {fileID: 1361400961}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -1313,7 +1362,23 @@ MonoBehaviour:
   attractSpeed: 5
   offsetX: 100
   maxRotation: 10
+  menuController: {fileID: 175185834}
   isSelected: 0
+--- !u!114 &1361400961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361400954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb8fa6008a8e1b40b7e99b3388efc74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
+  startScale: 0
+  isFinished: 0
 --- !u!1 &1408523218
 GameObject:
   m_ObjectHideFlags: 0

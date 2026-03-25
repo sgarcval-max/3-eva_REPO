@@ -7,6 +7,8 @@ public class MagneticMenuButton : MonoBehaviour
     public float offsetX = 100f;        // Distancia horizontal desde el selector
     public float maxRotation = 10f;     // Rotación máxima inicial en grados
 
+    public MenuMagnetController menuController; // Referencia al controlador
+
     private Vector3 startPos;           // Posición original del botón
     private Quaternion startRot;        // Rotación inicial del botón
     public bool isSelected = false;     // Solo se mueve si está seleccionado
@@ -15,7 +17,7 @@ public class MagneticMenuButton : MonoBehaviour
     {
         startPos = transform.position;
 
-        // Rotamos el botón un poco al azar al inicio
+        // Rotación inicial aleatoria
         float randomAngle = Random.Range(-maxRotation, maxRotation);
         startRot = Quaternion.Euler(0, 0, randomAngle);
         transform.rotation = startRot;
@@ -23,6 +25,9 @@ public class MagneticMenuButton : MonoBehaviour
 
     void Update()
     {
+        // --- NO hacemos nada hasta que el selector pueda interactuar ---
+        if (menuController != null && !menuController.canSelect) return;
+
         if (isSelected)
         {
             // Posición deseada: al lado del selector

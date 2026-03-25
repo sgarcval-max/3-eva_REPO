@@ -1,32 +1,81 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.UI;
 
 public class MenuMagnetController : MonoBehaviour
 {
-    public MagneticMenuButton[] buttons; // Los botones del men˙
-    public float moveSpeed = 10f;        // Velocidad del selector
-    public RectTransform selector;       // Tu im·n (selector)
+    [Header("Configuraci√≥n del men√∫")]
+    public MagneticMenuButton[] buttons;
+    public RectTransform selector;
+    public float moveSpeed = 10f;
 
-    int currentIndex = 0;
+    [HideInInspector]
+    public bool canSelect = false; // Controla cuando el selector puede interactuar
+
+    private int currentIndex = 0;
+    private CanvasGroup selectorCanvas;
 
     void Start()
     {
-        // Activar el primer botÛn
+        // Configuramos el CanvasGroup del selector
+        if (selector != null)
+        {
+            selectorCanvas = selector.GetComponent<CanvasGroup>();
+            if (selectorCanvas == null)
+                selectorCanvas = selector.gameObject.AddComponent<CanvasGroup>();
+
+            // Invisible e inactivo al inicio
+            selectorCanvas.alpha = 0f;
+            selectorCanvas.interactable = false;
+            selectorCanvas.blocksRaycasts = false;
+        }
+
+        // Seleccionamos el primer bot√≥n (solo visual, no afecta a la atracci√≥n)
         SelectButton(currentIndex);
     }
 
     void Update()
     {
-        // --- Teclado ---
+        // --- Verificamos si todos los botones terminaron la animaci√≥n de entrada ---
+        if (!canSelect)
+        {
+            bool allFinished = true;
+            foreach (var b in buttons)
+            {
+                ButtonScaleEntrance entrance = b.GetComponent<ButtonScaleEntrance>();
+                if (entrance != null && !entrance.isFinished)
+                {
+                    allFinished = false;
+                    break;
+                }
+            }
+
+            if (allFinished)
+            {
+                canSelect = true;
+
+                // Hacemos visible e interactivo el selector
+                if (selectorCanvas != null)
+                {
+                    selectorCanvas.alpha = 1f;
+                    selectorCanvas.interactable = true;
+                    selectorCanvas.blocksRaycasts = true;
+                }
+            }
+        }
+
+        // --- Si la animaci√≥n no ha terminado, no hacemos nada m√°s ---
+        if (!canSelect) return;
+
+        // --- Input teclado ---
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             ChangeIndex(-1);
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             ChangeIndex(1);
 
-        // --- RatÛn ---
+        // --- Input rat√≥n ---
         CheckMouseHover();
 
-        // Mover selector hacia el botÛn seleccionado
+        // Mover selector hacia el bot√≥n seleccionado (solo visual)
         Vector3 targetPos = new Vector3(selector.position.x, buttons[currentIndex].transform.position.y, selector.position.z);
         selector.position = Vector3.Lerp(selector.position, targetPos, Time.deltaTime * moveSpeed);
 
@@ -54,12 +103,10 @@ public class MenuMagnetController : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             Vector3 mousePos = Input.mousePosition;
-            Vector3 buttonPos = buttons[i].transform.position;
-
-            // Detectar si el cursor est· dentro del rect·ngulo del botÛn
             RectTransform rt = buttons[i].GetComponent<RectTransform>();
             Vector3[] corners = new Vector3[4];
             rt.GetWorldCorners(corners);
+
             if (mousePos.x >= corners[0].x && mousePos.x <= corners[2].x &&
                 mousePos.y >= corners[0].y && mousePos.y <= corners[2].y)
             {
@@ -70,11 +117,8 @@ public class MenuMagnetController : MonoBehaviour
                     buttons[currentIndex].isSelected = true;
                 }
 
-                // Clic del ratÛn
                 if (Input.GetMouseButtonDown(0))
-                {
                     buttons[currentIndex].GetComponent<Button>().onClick.Invoke();
-                }
             }
         }
     }
