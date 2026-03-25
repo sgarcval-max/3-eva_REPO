@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class MenuMagnetController : MonoBehaviour
 {
@@ -7,35 +8,34 @@ public class MenuMagnetController : MonoBehaviour
     public MagneticMenuButton[] buttons;
     public RectTransform selector;
     public float moveSpeed = 10f;
+    public float fadeDuration = 0.5f;   // Duración del fade-in
 
     [HideInInspector]
-    public bool canSelect = false; // Controla cuando el selector puede interactuar
+    public bool canSelect = false;
 
     private int currentIndex = 0;
     private CanvasGroup selectorCanvas;
 
     void Start()
     {
-        // Configuramos el CanvasGroup del selector
+        // Configuramos CanvasGroup
         if (selector != null)
         {
             selectorCanvas = selector.GetComponent<CanvasGroup>();
             if (selectorCanvas == null)
                 selectorCanvas = selector.gameObject.AddComponent<CanvasGroup>();
 
-            // Invisible e inactivo al inicio
             selectorCanvas.alpha = 0f;
             selectorCanvas.interactable = false;
             selectorCanvas.blocksRaycasts = false;
         }
 
-        // Seleccionamos el primer botón (solo visual, no afecta a la atracción)
         SelectButton(currentIndex);
     }
 
     void Update()
     {
-        // --- Verificamos si todos los botones terminaron la animación de entrada ---
+        // Verificamos si todos los botones terminaron la animación
         if (!canSelect)
         {
             bool allFinished = true;
@@ -52,19 +52,12 @@ public class MenuMagnetController : MonoBehaviour
             if (allFinished)
             {
                 canSelect = true;
-
-                // Hacemos visible e interactivo el selector
-                if (selectorCanvas != null)
-                {
-                    selectorCanvas.alpha = 1f;
-                    selectorCanvas.interactable = true;
-                    selectorCanvas.blocksRaycasts = true;
-                }
+                StartCoroutine(FadeInSelector());
             }
         }
 
-        // --- Si la animación no ha terminado, no hacemos nada más ---
-        if (!canSelect) return;
+        // Si el selector todavía no está activo, no hacemos input
+        if (!canSelect || selectorCanvas.alpha < 1f) return;
 
         // --- Input teclado ---
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
@@ -75,13 +68,29 @@ public class MenuMagnetController : MonoBehaviour
         // --- Input ratón ---
         CheckMouseHover();
 
-        // Mover selector hacia el botón seleccionado (solo visual)
+        // Mover selector hacia el botón seleccionado
         Vector3 targetPos = new Vector3(selector.position.x, buttons[currentIndex].transform.position.y, selector.position.z);
         selector.position = Vector3.Lerp(selector.position, targetPos, Time.deltaTime * moveSpeed);
 
-        // Seleccionar con Enter
         if (Input.GetKeyDown(KeyCode.Return))
             buttons[currentIndex].GetComponent<Button>().onClick.Invoke();
+    }
+
+    IEnumerator FadeInSelector()
+    {
+        float elapsed = 0f;
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            float alpha = Mathf.Clamp01(elapsed / fadeDuration);
+            selectorCanvas.alpha = alpha;
+            yield return null;
+        }
+
+        // Al final del fade, hacemos interactivo el selector
+        selectorCanvas.alpha = 1f;
+        selectorCanvas.interactable = true;
+        selectorCanvas.blocksRaycasts = true;
     }
 
     void ChangeIndex(int dir)
