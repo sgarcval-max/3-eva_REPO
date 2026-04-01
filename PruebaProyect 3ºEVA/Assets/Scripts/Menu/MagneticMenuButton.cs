@@ -25,26 +25,42 @@ public class MagneticMenuButton : MonoBehaviour
 
     void Update()
     {
-        // --- NO hacemos nada hasta que el selector pueda interactuar ---
-        if (menuController != null && !menuController.canSelect) return;
+        // No hacemos nada hasta que el menú permita seleccionar
+        if (menuController != null && !menuController.canSelect)
+            return;
 
         if (isSelected)
         {
-            // Posición deseada: al lado del selector
-            Vector3 targetPos = new Vector3(magnet.position.x + offsetX, transform.position.y, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * attractSpeed);
-
-            // Rotación deseada: recto
-            Quaternion targetRot = Quaternion.Euler(0, 0, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * attractSpeed);
+            MoveToMagnet();
         }
         else
         {
-            // Volver a posición original
-            transform.position = Vector3.Lerp(transform.position, startPos, Time.deltaTime * attractSpeed);
-
-            // Volver a rotación original
-            transform.rotation = Quaternion.Lerp(transform.rotation, startRot, Time.deltaTime * attractSpeed);
+            ReturnToStart();
         }
+    }
+
+    void MoveToMagnet()
+    {
+        // Posición deseada: al lado del selector
+        Vector3 targetPos = new Vector3(
+            magnet.position.x + offsetX,
+            transform.position.y,
+            transform.position.z
+        );
+
+        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * attractSpeed);
+
+        // Rotación recta
+        Quaternion targetRot = Quaternion.Euler(0, 0, 0);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * attractSpeed);
+    }
+
+    void ReturnToStart()
+    {
+        // Volver a posición original
+        transform.position = Vector3.Lerp(transform.position, startPos, Time.deltaTime * attractSpeed);
+
+        // Volver a rotación original
+        transform.rotation = Quaternion.Lerp(transform.rotation, startRot, Time.deltaTime * attractSpeed);
     }
 }

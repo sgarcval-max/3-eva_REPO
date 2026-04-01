@@ -8,7 +8,7 @@ public class MenuMagnetController : MonoBehaviour
     public MagneticMenuButton[] buttons;
     public RectTransform selector;
     public float moveSpeed = 10f;
-    public float fadeDuration = 0.5f;   // Duración del fade-in
+    public float fadeDuration = 0.5f;
 
     [HideInInspector]
     public bool canSelect = false;
@@ -18,7 +18,6 @@ public class MenuMagnetController : MonoBehaviour
 
     void Start()
     {
-        // Configuramos CanvasGroup
         if (selector != null)
         {
             selectorCanvas = selector.GetComponent<CanvasGroup>();
@@ -30,12 +29,14 @@ public class MenuMagnetController : MonoBehaviour
             selectorCanvas.blocksRaycasts = false;
         }
 
-        SelectButton(currentIndex);
+        // Aseguramos que solo el primer botón esté seleccionado
+        for (int i = 0; i < buttons.Length; i++)
+            buttons[i].isSelected = (i == currentIndex);
     }
 
     void Update()
     {
-        // Verificamos si todos los botones terminaron la animación
+        // Esperamos a que los botones terminen su animación
         if (!canSelect)
         {
             bool allFinished = true;
@@ -56,24 +57,33 @@ public class MenuMagnetController : MonoBehaviour
             }
         }
 
-        // Si el selector todavía no está activo, no hacemos input
         if (!canSelect || selectorCanvas.alpha < 1f) return;
 
-        // --- Input teclado ---
+        // --- INPUT TECLADO ---
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             ChangeIndex(-1);
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             ChangeIndex(1);
 
-        // --- Input ratón ---
-        CheckMouseHover();
-
-        // Mover selector hacia el botón seleccionado
+        // Mover selector suavemente
         Vector3 targetPos = new Vector3(selector.position.x, buttons[currentIndex].transform.position.y, selector.position.z);
         selector.position = Vector3.Lerp(selector.position, targetPos, Time.deltaTime * moveSpeed);
 
+        // Ejecutar acción
         if (Input.GetKeyDown(KeyCode.Return))
+        {
+            // Sincronizamos currentIndex con el botón que está realmente seleccionado
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                if (buttons[i].isSelected)
+                {
+                    currentIndex = i;
+                    break;
+                }
+            }
+
             buttons[currentIndex].GetComponent<Button>().onClick.Invoke();
+        }
     }
 
     IEnumerator FadeInSelector()
@@ -82,12 +92,10 @@ public class MenuMagnetController : MonoBehaviour
         while (elapsed < fadeDuration)
         {
             elapsed += Time.deltaTime;
-            float alpha = Mathf.Clamp01(elapsed / fadeDuration);
-            selectorCanvas.alpha = alpha;
+            selectorCanvas.alpha = Mathf.Clamp01(elapsed / fadeDuration);
             yield return null;
         }
 
-        // Al final del fade, hacemos interactivo el selector
         selectorCanvas.alpha = 1f;
         selectorCanvas.interactable = true;
         selectorCanvas.blocksRaycasts = true;
@@ -99,36 +107,6 @@ public class MenuMagnetController : MonoBehaviour
         currentIndex += dir;
         if (currentIndex < 0) currentIndex = buttons.Length - 1;
         if (currentIndex >= buttons.Length) currentIndex = 0;
-        SelectButton(currentIndex);
-    }
-
-    void SelectButton(int index)
-    {
-        buttons[index].isSelected = true;
-    }
-
-    void CheckMouseHover()
-    {
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            Vector3 mousePos = Input.mousePosition;
-            RectTransform rt = buttons[i].GetComponent<RectTransform>();
-            Vector3[] corners = new Vector3[4];
-            rt.GetWorldCorners(corners);
-
-            if (mousePos.x >= corners[0].x && mousePos.x <= corners[2].x &&
-                mousePos.y >= corners[0].y && mousePos.y <= corners[2].y)
-            {
-                if (currentIndex != i)
-                {
-                    buttons[currentIndex].isSelected = false;
-                    currentIndex = i;
-                    buttons[currentIndex].isSelected = true;
-                }
-
-                if (Input.GetMouseButtonDown(0))
-                    buttons[currentIndex].GetComponent<Button>().onClick.Invoke();
-            }
-        }
+        buttons[currentIndex].isSelected = true;
     }
 }
