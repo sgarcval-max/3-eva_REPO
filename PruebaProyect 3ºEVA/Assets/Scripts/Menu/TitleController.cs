@@ -1,85 +1,144 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Collections;
 
 public class TitleController : MonoBehaviour
 {
     [Header("UI Elements")]
     public RectTransform titleImage;       // Imagen del título
-    public GameObject pressSpaceText;      // Texto "Presiona ESPACIO"
+    public TMP_Text pressSpaceText;        // Texto TMP "Presiona ESPACIO"
     public RectTransform buttonsContainer; // Contenedor de botones
 
-    [Header("Animación")]
-    public float animationDuration = 1f;       // Duración del movimiento + escalado
-    public float scaleFactor = 0.7f;           // Escala final del título
-    public Vector2 moveDirection = new Vector2(0, 200); // Dirección y distancia del movimiento
+    [Header("Animations")]
+    public float entranceDuration = 1f;    // Animación de entrada (escala + fade)
+    public float spaceAnimDuration = 1f;   // Animación al pulsar ESPACIO
+    public float scaleFactor = 0.7f;       // Escala final al mover hacia arriba
+    public Vector2 moveDirection = new Vector2(0, 200); // Dirección de movimiento al pulsar ESPACIO
+    public float blinkFadeDuration = 0.5f; // Duración fade in/out del texto parpadeante
+    public float blinkMinAlpha = 0.2f;     // Opacidad mínima del parpadeo
 
-    private Vector2 titleStartPos;
-    private Vector3 titleStartScale;
-    private bool started = false;
+    private CanvasGroup titleCanvasGroup;
+    private Vector3 originalScale;
+    private Vector2 originalPos;
+    private bool entranceFinished = false;
+    private bool spacePressed = false;
 
     void Start()
     {
-        // Guardar posición y escala inicial
-        titleStartPos = titleImage.anchoredPosition;
-        titleStartScale = titleImage.localScale;
+        // Guardar escala y posición original
+        originalScale = titleImage.localScale;
+        originalPos = titleImage.anchoredPosition;
 
-        // Ocultar botones al inicio
+        // Iniciar desde 0 y fade 0
+        titleImage.localScale = Vector3.zero;
+        titleCanvasGroup = titleImage.GetComponent<CanvasGroup>();
+        if (titleCanvasGroup == null)
+            titleCanvasGroup = titleImage.gameObject.AddComponent<CanvasGroup>();
+        titleCanvasGroup.alpha = 0f;
+
+        // Asegurarse de que el texto TMP esté activo
+        if (pressSpaceText != null)
+            pressSpaceText.gameObject.SetActive(true);
+
+        // Ocultar botones
         buttonsContainer.gameObject.SetActive(false);
-
-        // Desactivar animaciones de botones al inicio
         foreach (var b in buttonsContainer.GetComponentsInChildren<Button>())
         {
-            ButtonScaleEntrance entrance = b.GetComponent<ButtonScaleEntrance>();
-            if (entrance != null)
-                entrance.enabled = false;
+            var entrance = b.GetComponent<ButtonScaleEntrance>();
+            if (entrance != null) entrance.enabled = false;
         }
+
+        // Iniciar animación de entrada
+        StartCoroutine(EntranceAnimation());
+
+        // Iniciar parpadeo del texto
+        if (pressSpaceText != null)
+            StartCoroutine(BlinkText());
     }
 
     void Update()
     {
-        if (!started && Input.GetKeyDown(KeyCode.Space))
+        if (!spacePressed && entranceFinished && Input.GetKeyDown(KeyCode.Space))
         {
-            started = true;
-            StartCoroutine(AnimateTitle());
+            spacePressed = true;
+            pressSpaceText.gameObject.SetActive(false);
+            StartCoroutine(SpaceAnimation());
         }
     }
 
-    IEnumerator AnimateTitle()
+    IEnumerator EntranceAnimation()
     {
-        // 1️⃣ Desaparecer el texto
-        pressSpaceText.SetActive(false);
-
-        // 2️⃣ Animación simultánea de escala y movimiento
         float elapsed = 0f;
-        Vector2 targetPos = titleStartPos + moveDirection;
-        Vector3 targetScale = titleStartScale * scaleFactor;
-
-        while (elapsed < animationDuration)
+        while (elapsed < entranceDuration)
         {
             elapsed += Time.deltaTime;
-            float t = elapsed / animationDuration;
-
-            // Escalar
-            titleImage.localScale = Vector3.Lerp(titleStartScale, targetScale, t);
-
-            // Mover en la dirección deseada
-            titleImage.anchoredPosition = Vector2.Lerp(titleStartPos, targetPos, t);
-
+            float t = elapsed / entranceDuration;
+            titleImage.localScale = Vector3.Lerp(Vector3.zero, originalScale, t);
+            titleCanvasGroup.alpha = Mathf.Lerp(0f, 1f, t);
             yield return null;
         }
+        titleImage.localScale = originalScale;
+        titleCanvasGroup.alpha = 1f;
+        entranceFinished = true;
+    }
 
-        // Valores finales exactos
-        titleImage.localScale = targetScale;
+    IEnumerator SpaceAnimation()
+    {
+        Vector2 startPos = titleImage.anchoredPosition;
+        Vector3 startScale = titleImage.localScale;
+        Vector2 targetPos = originalPos + moveDirection;
+        Vector3 targetScale = originalScale * scaleFactor;
+
+        float elapsed = 0f;
+        while (elapsed < spaceAnimDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / spaceAnimDuration;
+            titleImage.anchoredPosition = Vector2.Lerp(startPos, targetPos, t);
+            titleImage.localScale = Vector3.Lerp(startScale, targetScale, t);
+            yield return null;
+        }
         titleImage.anchoredPosition = targetPos;
+        titleImage.localScale = targetScale;
 
-        // 3️⃣ Activar botones y animaciones
+        // Activar botones y animaciones
         buttonsContainer.gameObject.SetActive(true);
         foreach (var b in buttonsContainer.GetComponentsInChildren<Button>())
         {
-            ButtonScaleEntrance entrance = b.GetComponent<ButtonScaleEntrance>();
-            if (entrance != null)
-                entrance.enabled = true;
+            var entrance = b.GetComponent<ButtonScaleEntrance>();
+            if (entrance != null) entrance.enabled = true;
         }
+    }
+
+    IEnumerator BlinkText()
+    {
+        CanvasGroup textCanvas = pressSpaceText.GetComponent<CanvasGroup>();
+        if (textCanvas == null)
+            textCanvas = pressSpaceText.gameObject.AddComponent<CanvasGroup>();
+        textCanvas.alpha = 1f;
+
+        while (!spacePressed)
+        {
+            // Fade out
+            float elapsed = 0f;
+            while (elapsed < blinkFadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                textCanvas.alpha = Mathf.Lerp(1f, blinkMinAlpha, elapsed / blinkFadeDuration);
+                yield return null;
+            }
+
+            // Fade in
+            elapsed = 0f;
+            while (elapsed < blinkFadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                textCanvas.alpha = Mathf.Lerp(blinkMinAlpha, 1f, elapsed / blinkFadeDuration);
+                yield return null;
+            }
+        }
+
+        textCanvas.alpha = 0f; // Asegurar que desaparece al presionar ESPACIO
     }
 }

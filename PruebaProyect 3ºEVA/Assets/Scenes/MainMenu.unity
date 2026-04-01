@@ -1201,7 +1201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1193953644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1209,7 +1209,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193953643}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1347,8 +1347,8 @@ RectTransform:
   m_GameObject: {fileID: 1275572330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 19.11, y: 10.58, z: 19.11}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 19.6, y: 10.851281, z: 19.6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 191666441}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1710,6 +1710,7 @@ GameObject:
   - component: {fileID: 1684514516}
   - component: {fileID: 1684514517}
   - component: {fileID: 1684514518}
+  - component: {fileID: 1684514519}
   - component: {fileID: 1684514515}
   m_Layer: 0
   m_Name: MenuManager
@@ -1758,11 +1759,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleImage: {fileID: 2016405143}
-  pressSpaceText: {fileID: 1193953643}
+  pressSpaceText: {fileID: 1193953645}
   buttonsContainer: {fileID: 1745459875}
-  animationDuration: 0.5
+  entranceDuration: 1
+  spaceAnimDuration: 0.5
   scaleFactor: 0.6
   moveDirection: {x: 0, y: 295}
+  blinkFadeDuration: 1
+  blinkMinAlpha: 0
 --- !u!114 &1684514518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1770,7 +1774,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684514514}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd43f9605ab6ac2409c410d530b3bf66, type: 3}
   m_Name: 
@@ -1778,6 +1782,20 @@ MonoBehaviour:
   targetText: {fileID: 1193953645}
   fadeDuration: 1
   minAlpha: 0
+--- !u!114 &1684514519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684514514}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623d5bc1e39808a408d38329d67a6d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleImage: {fileID: 2016405143}
+  duration: 1
 --- !u!1 &1745459874
 GameObject:
   m_ObjectHideFlags: 0
