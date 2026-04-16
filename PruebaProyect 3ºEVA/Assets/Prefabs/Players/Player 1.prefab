@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763959bbbdc8eac459ec78c90006972c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 7
   jumpForce: 15
   groundCheck: {fileID: 4930360187860957165}
   checkRadius: 0.2
