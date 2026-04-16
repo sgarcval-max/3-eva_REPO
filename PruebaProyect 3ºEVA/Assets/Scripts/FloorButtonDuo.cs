@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FloorButton : MonoBehaviour
+public class FloorButtonDuo : MonoBehaviour
 {
     public GameObject objectToActivate;
     public TwoPlayerZone requiredZone;
