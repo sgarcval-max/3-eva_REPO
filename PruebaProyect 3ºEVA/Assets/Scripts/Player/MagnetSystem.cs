@@ -8,13 +8,14 @@ public class MagnetSystem : MonoBehaviour
     public float magnetStrength = 15f;
     public float magnetRange = 6f;
     public float minDistance = 0.5f;
-    public LayerMask metalLayer;  // Solo objetos metálicos
+    public LayerMask metalLayer;
 
     private Rigidbody2D rb;
     private PlayerSetup setup;
 
-    // NUEVO: objeto que está siendo atraído
+    // Cache del objetivo actual
     private Rigidbody2D currentTarget;
+    private MetalObject currentMetal;  // Cacheado para no llamar GetComponent cada frame
 
     void Awake()
     {
@@ -26,12 +27,10 @@ public class MagnetSystem : MonoBehaviour
     {
         if (currentTarget == null)
         {
-            // Buscar un nuevo metal si no hay ninguno siendo atraído
             FindMetal();
         }
         else
         {
-            // Seguir atrayendo o repeliendo el objeto actual
             AffectCurrentMetal();
         }
     }
@@ -39,6 +38,10 @@ public class MagnetSystem : MonoBehaviour
     void FindMetal()
     {
         Collider2D[] metals = Physics2D.OverlapCircleAll(rb.position, magnetRange, metalLayer);
+
+        float closestDistance = float.MaxValue;
+        Rigidbody2D closestRb = null;
+        MetalObject closestMetal = null;
 
         foreach (var col in metals)
         {
@@ -48,48 +51,56 @@ public class MagnetSystem : MonoBehaviour
             MetalObject metal = col.GetComponent<MetalObject>();
             if (metal == null) continue;
 
-            // Solo selecciona el primer objeto que cumpla las condiciones
-            currentTarget = metalRb;
-            break;
+            float distance = Vector2.Distance(rb.position, col.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestRb = metalRb;
+                closestMetal = metal;
+            }
         }
+
+        // Asignamos el objetivo más cercano y cacheamos el MetalObject
+        currentTarget = closestRb;
+        currentMetal = closestMetal;
     }
 
     void AffectCurrentMetal()
     {
-        if (currentTarget == null) return;
+        if (currentTarget == null || currentMetal == null)
+        {
+            ReleaseCurrentMetal();
+            return;
+        }
 
-        Vector2 dir = currentTarget.position - rb.position;
+        Vector2 myPos = rb.position;
+        Vector2 targetPos = currentTarget.position;
+        Vector2 dir = targetPos - myPos;
         float distance = dir.magnitude;
 
         // Soltar si se aleja demasiado
         if (distance > magnetRange * 1.2f)
         {
-            currentTarget = null;
-            return;
-        }
-
-        // Aplicar fuerza
-        MetalObject metal = currentTarget.GetComponent<MetalObject>();
-        if (metal == null)
-        {
-            currentTarget = null;
+            ReleaseCurrentMetal();
             return;
         }
 
         if (distance < minDistance) return;
 
-        float strength = magnetStrength * (1f - distance / magnetRange);
+        // Fuerza más realista basada en distancia al cuadrado
+        float strength = magnetStrength / (distance * distance);
+        strength = Mathf.Clamp(strength, 0f, magnetStrength);
         Vector2 force = dir.normalized * strength;
 
-        if (setup.isPositive != metal.isPositive)
-            currentTarget.AddForce(-force); // Atracción
+        if (setup.isPositive != currentMetal.isPositive)
+            currentTarget.AddForce(-force);  // Atracción
         else
-            currentTarget.AddForce(force);  // Repulsión
+            currentTarget.AddForce(force);   // Repulsión
     }
 
-    // NUEVO: Método público para soltar el objeto
     public void ReleaseCurrentMetal()
     {
         currentTarget = null;
+        currentMetal = null;  // Limpiamos también el cache
     }
 }

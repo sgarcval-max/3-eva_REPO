@@ -6759,6 +6759,39 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &144469213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144469214}
+  m_Layer: 3
+  m_Name: Respawns Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &144469214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144469213}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.6, y: -23.2, z: 0}
+  m_LocalScale: {x: 7.57, y: 4.3, z: 2.29}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1751192221}
+  - {fileID: 1794886936}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &150822003
 GameObject:
   m_ObjectHideFlags: 0
@@ -6815,11 +6848,11 @@ Transform:
   m_GameObject: {fileID: 180602740}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.5, y: 1.1, z: 0}
-  m_LocalScale: {x: 7.57, y: 4.3, z: 2.29}
+  m_LocalPosition: {x: -4.1083226, y: 5.651163, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 818069355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &199347939
 GameObject:
@@ -7588,11 +7621,11 @@ Transform:
   m_GameObject: {fileID: 335156022}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.6, y: -23.2, z: 0}
-  m_LocalScale: {x: 7.57, y: 4.3, z: 2.29}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 818069355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &353952908
 GameObject:
@@ -8329,7 +8362,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 200
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -8997,8 +9030,8 @@ Transform:
   m_GameObject: {fileID: 593624141}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.38176957, y: 0.65, z: 0}
-  m_LocalScale: {x: 0.6327961, y: 2.2, z: 2.2}
+  m_LocalPosition: {x: -0.28037456, y: 0.858182, z: 0}
+  m_LocalScale: {x: 0.47118518, y: 3.1999998, z: 2.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 809760927}
@@ -10536,6 +10569,40 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &818069354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 818069355}
+  m_Layer: 3
+  m_Name: Respawns Imanes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &818069355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818069354}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.6, y: -23.2, z: 0}
+  m_LocalScale: {x: 7.57, y: 4.3, z: 2.29}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1416578436}
+  - {fileID: 335156023}
+  - {fileID: 180602741}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &819532492
 GameObject:
   m_ObjectHideFlags: 0
@@ -12215,7 +12282,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 31, y: -15, z: 0}
+  - first: {x: 31, y: -16, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -12225,7 +12292,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 32, y: -15, z: 0}
+  - first: {x: 32, y: -16, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -12235,7 +12302,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 33, y: -15, z: 0}
+  - first: {x: 33, y: -16, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -12245,7 +12312,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 34, y: -15, z: 0}
+  - first: {x: 34, y: -16, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -12255,7 +12322,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 35, y: -15, z: 0}
+  - first: {x: 35, y: -16, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -12265,7 +12332,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 36, y: -15, z: 0}
+  - first: {x: 36, y: -16, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -15090,13 +15157,13 @@ CompositeCollider2D:
       - X: -130000000
         Y: -130000000
     - - X: 370000000
-        Y: -140000000
-      - X: 310000000
-        Y: -140000000
+        Y: -150000000
       - X: 310000000
         Y: -150000000
+      - X: 310000000
+        Y: -160000000
       - X: 370000000
-        Y: -150000000
+        Y: -160000000
     - - X: -230000000
         Y: -160000000
       - X: -280000000
@@ -15191,10 +15258,10 @@ CompositeCollider2D:
       - {x: -13.00003, y: -12}
       - {x: -17, y: -12.00003}
       - {x: -16.999971, y: -13}
-    - - {x: 36.999973, y: -15}
-      - {x: 36.999973, y: -14}
-      - {x: 31, y: -14.000029}
-      - {x: 31.000029, y: -15}
+    - - {x: 36.999973, y: -16}
+      - {x: 36.999973, y: -15}
+      - {x: 31, y: -15.000029}
+      - {x: 31.000029, y: -16}
     - - {x: -23.000029, y: -17}
       - {x: -23.000029, y: -16}
       - {x: -28, y: -16.000029}
@@ -17102,14 +17169,14 @@ RectTransform:
   m_GameObject: {fileID: 1365967022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
+  m_LocalScale: {x: 3.08, y: 3.08, z: 3.08}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1370478135}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48, y: 0}
+  m_AnchoredPosition: {x: -79, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1370478134
@@ -17674,11 +17741,11 @@ Transform:
   m_GameObject: {fileID: 1416578435}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.4, y: -5.3, z: 0}
-  m_LocalScale: {x: 7.57, y: 4.3, z: 2.29}
+  m_LocalPosition: {x: 4.0686927, y: 4.1627913, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 818069355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1419969054
 GameObject:
@@ -19223,7 +19290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1751192221}
   m_Layer: 3
-  m_Name: Respawn Player
+  m_Name: Respawn Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19238,11 +19305,11 @@ Transform:
   m_GameObject: {fileID: 1751192220}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.0686, y: 1.6819992, z: 0}
-  m_LocalScale: {x: 7.57, y: 4.3, z: 2.29}
+  m_LocalPosition: {x: -5.90074, y: 5.786512, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 144469214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1760633762
 GameObject:
@@ -19553,7 +19620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1794886936}
   m_Layer: 3
-  m_Name: Respawn Player (1)
+  m_Name: Respawn Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19568,11 +19635,11 @@ Transform:
   m_GameObject: {fileID: 1794886935}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.7, y: 17.6, z: 0}
-  m_LocalScale: {x: 7.57, y: 4.3, z: 2.29}
+  m_LocalPosition: {x: 4.3725233, y: 9.488373, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 144469214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796282838
 GameObject:
@@ -21161,8 +21228,8 @@ Transform:
   m_GameObject: {fileID: 2013918389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.53, y: -19.31, z: 0}
-  m_LocalScale: {x: 7.6485934, y: 1, z: 1}
+  m_LocalPosition: {x: 23.49, y: -19.44, z: 0}
+  m_LocalScale: {x: 10.271971, y: 0.6875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 593624142}
@@ -21507,7 +21574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 229, y: 436}
+  m_AnchoredPosition: {x: 107, y: 436}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2086561673
@@ -21572,7 +21639,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -21672,11 +21739,8 @@ SceneRoots:
   - {fileID: 907214574}
   - {fileID: 461714719}
   - {fileID: 254914599}
+  - {fileID: 144469214}
+  - {fileID: 818069355}
   - {fileID: 59393275}
-  - {fileID: 1751192221}
-  - {fileID: 1794886936}
-  - {fileID: 1416578436}
-  - {fileID: 335156023}
-  - {fileID: 180602741}
   - {fileID: 1433375666}
   - {fileID: 526277479}
