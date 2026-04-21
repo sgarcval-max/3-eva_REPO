@@ -10602,7 +10602,7 @@ MonoBehaviour:
   menuButton: {fileID: 129897507}
   fadeDuration: 1
   countdownTimer: {fileID: 766533086}
-  nextLevelName: Level 2
+  nextLevelName: Level 3
 --- !u!1 &1036352192
 GameObject:
   m_ObjectHideFlags: 0

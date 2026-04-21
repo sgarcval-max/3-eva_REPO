@@ -58,7 +58,7 @@ public class LevelFinish : MonoBehaviour
 
     private void NextLevel()
     {
-        SceneManager.LoadScene("Level 3");
+        SceneManager.LoadScene("Level 2");
     }
 
     private void GoToMenu()
