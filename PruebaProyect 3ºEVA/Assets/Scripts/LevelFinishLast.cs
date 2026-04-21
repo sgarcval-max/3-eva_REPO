@@ -4,12 +4,11 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
 
-public class LevelFinish : MonoBehaviour
+public class LevelFinishLast : MonoBehaviour
 {
     [Header("UI")]
     public CanvasGroup winPanel;
     public TextMeshProUGUI winText;
-    public Button nextLevelButton;
     public Button menuButton;
     public float fadeDuration = 1f;
 
@@ -35,7 +34,7 @@ public class LevelFinish : MonoBehaviour
 
     private IEnumerator ShowWinPanel()
     {
-        winText.text = "NIVEL COMPLETADO";
+        winText.text = "JUEGO COMPLETADO";
         winPanel.interactable = true;
         winPanel.blocksRaycasts = true;
 
@@ -49,13 +48,7 @@ public class LevelFinish : MonoBehaviour
 
         winPanel.alpha = 1f;
 
-        nextLevelButton.onClick.AddListener(NextLevel);
         menuButton.onClick.AddListener(GoToMenu);
-    }
-
-    private void NextLevel()
-    {
-        SceneManager.LoadScene("Level 3");
     }
 
     private void GoToMenu()

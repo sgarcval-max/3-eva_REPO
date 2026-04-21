@@ -14,26 +14,35 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
+    private Animator animator;
     private bool isGrounded;
     private float moveInput = 0f;
-
     private bool facingRight = true;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
-        // Movimiento
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-
-        // Detectar suelo
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
-
-        // Flip del personaje
         HandleFlip();
+        UpdateAnimations();
+    }
+
+    void UpdateAnimations()
+    {
+        // Running
+        animator.SetBool("isRunning", moveInput != 0 && isGrounded);
+
+        // Jumping
+        animator.SetBool("isJumping", !isGrounded && rb.linearVelocity.y > 0);
+
+        // Falling
+        animator.SetBool("isFalling", !isGrounded && rb.linearVelocity.y < 0);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -52,20 +61,13 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleFlip()
     {
-        if (moveInput > 0 && !facingRight)
-        {
-            Flip();
-        }
-        else if (moveInput < 0 && facingRight)
-        {
-            Flip();
-        }
+        if (moveInput > 0 && !facingRight) Flip();
+        else if (moveInput < 0 && facingRight) Flip();
     }
 
     void Flip()
     {
         facingRight = !facingRight;
-
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;

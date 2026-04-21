@@ -95,4 +95,9 @@ public class CountdownTimer : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void StopTimer()
+    {
+        timerRunning = false;
+    }
 }
