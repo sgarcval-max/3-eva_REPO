@@ -38,6 +38,9 @@ public class LevelFinishLast : MonoBehaviour
         winPanel.interactable = true;
         winPanel.blocksRaycasts = true;
 
+        PlayerPrefs.SetInt("Level2Completed", 1);
+        PlayerPrefs.Save();
+
         float elapsed = 0f;
         while (elapsed < fadeDuration)
         {
