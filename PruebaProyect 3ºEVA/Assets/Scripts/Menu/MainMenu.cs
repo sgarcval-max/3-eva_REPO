@@ -8,17 +8,22 @@ public class MainMenu : MonoBehaviour
     public GameObject levelSelectorPanel;
     public GameObject settingsPanel;
 
+    [Header("Imagen a ocultar")]
+    public GameObject imageToHide;
+
     private void Start()
     {
         mainPanel.SetActive(true);
         levelSelectorPanel.SetActive(false);
         settingsPanel.SetActive(false);
+        imageToHide.SetActive(true);
     }
 
     public void OpenLevelSelector()
     {
         mainPanel.SetActive(false);
         levelSelectorPanel.SetActive(true);
+        imageToHide.SetActive(false);  // Oculta la imagen
     }
 
     public void OpenSettings()
@@ -32,6 +37,7 @@ public class MainMenu : MonoBehaviour
         mainPanel.SetActive(true);
         levelSelectorPanel.SetActive(false);
         settingsPanel.SetActive(false);
+        imageToHide.SetActive(true);  // Vuelve a mostrar la imagen
     }
 
     public void QuitGame()
