@@ -10515,7 +10515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000335108}
   - component: {fileID: 1000335107}
-  - component: {fileID: 1000335106}
+  - component: {fileID: 1000335109}
   m_Layer: 0
   m_Name: FInal Box
   m_TagString: Untagged
@@ -10523,24 +10523,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1000335106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000335105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20f81d866de43f648b98747cc9404a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winPanel: {fileID: 818765173}
-  winText: {fileID: 1202017980}
-  nextLevelButton: {fileID: 134238092}
-  menuButton: {fileID: 129897507}
-  fadeDuration: 1
-  countdownTimer: {fileID: 766533086}
 --- !u!61 &1000335107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10602,6 +10584,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1000335109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000335105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6957198d1e441ad458bbc0d95aeed9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winPanel: {fileID: 818765173}
+  winText: {fileID: 1202017980}
+  nextLevelButton: {fileID: 134238092}
+  menuButton: {fileID: 129897507}
+  fadeDuration: 1
+  countdownTimer: {fileID: 766533086}
+  nextLevelName: Level 2
 --- !u!1 &1036352192
 GameObject:
   m_ObjectHideFlags: 0
