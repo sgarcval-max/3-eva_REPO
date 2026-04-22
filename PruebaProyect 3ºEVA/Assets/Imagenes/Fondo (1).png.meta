@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 6f868f35064dd574c878ad99a9a1fefb
+guid: 7a1004ec5cd8f2a49a01fc1a1523177f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 677113229654223717
-    second: tituloConCirculo_0
-  - first:
-      213: -1521259038505122296
-    second: tituloConCirculo_1
+      213: -4093435073842895660
+    second: Fondo (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tituloConCirculo_0
+      name: Fondo (1)_0
       rect:
         serializedVersion: 2
-        x: 2485
-        y: 2258
-        width: 38
-        height: 58
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56be14615e6956900800000000000000
-      internalID: 677113229654223717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tituloConCirculo_1
-      rect:
-        serializedVersion: 2
-        x: 301
-        y: 373
-        width: 2590
-        height: 1808
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 806cc86e6f663eae0800000000000000
-      internalID: -1521259038505122296
+      spriteID: 4d428700d723137c0800000000000000
+      internalID: -4093435073842895660
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tituloConCirculo_0: 677113229654223717
-      tituloConCirculo_1: -1521259038505122296
+      Fondo (1)_0: -4093435073842895660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

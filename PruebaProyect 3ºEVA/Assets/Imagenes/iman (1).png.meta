@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: ef69615ca57a83343877019fc424c073
+guid: 4d1902834b8033848b9a98684bf77d71
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3748425351803905432
-    second: titulo_0
-  - first:
-      213: -260909735339549982
-    second: titulo_1
+      213: 5038044946471165819
+    second: iman (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: titulo_0
+      name: iman (1)_0
       rect:
         serializedVersion: 2
-        x: 2485
-        y: 2258
-        width: 38
-        height: 58
+        x: 147
+        y: 115
+        width: 820
+        height: 1197
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89527595ff4150430800000000000000
-      internalID: 3748425351803905432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: titulo_1
-      rect:
-        serializedVersion: 2
-        x: 424
-        y: 688
-        width: 2467
-        height: 1039
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ea15a26aff016cf0800000000000000
-      internalID: -260909735339549982
+      spriteID: b7f9dd4af2bbae540800000000000000
+      internalID: 5038044946471165819
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      titulo_0: 3748425351803905432
-      titulo_1: -260909735339549982
+      iman (1)_0: 5038044946471165819
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
