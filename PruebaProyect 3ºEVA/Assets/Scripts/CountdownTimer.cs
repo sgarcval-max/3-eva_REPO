@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
+using Button = UnityEngine.UI.Button;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -50,7 +51,6 @@ public class CountdownTimer : MonoBehaviour
         int minutes = Mathf.FloorToInt(time / 60f);
         int seconds = Mathf.CeilToInt(time % 60f);
 
-        // Si son 60 segundos exactos al redondear, ajustamos
         if (seconds == 60)
         {
             minutes++;
@@ -58,13 +58,19 @@ public class CountdownTimer : MonoBehaviour
         }
 
         if (minutes >= 1)
-        {
             return string.Format("{0:00}:{1:00} mins", minutes, seconds);
-        }
         else
-        {
             return string.Format("{0:00} s", seconds);
-        }
+    }
+
+    public void StopTimer()
+    {
+        timerRunning = false;
+    }
+
+    public void ResumeTimer()
+    {
+        timerRunning = true;
     }
 
     private IEnumerator ShowGameOver()
@@ -94,10 +100,5 @@ public class CountdownTimer : MonoBehaviour
     private void GoToMenu()
     {
         SceneManager.LoadScene("MainMenu");
-    }
-
-    public void StopTimer()
-    {
-        timerRunning = false;
     }
 }
