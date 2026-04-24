@@ -5243,8 +5243,8 @@ RectTransform:
   - {fileID: 1365967025}
   - {fileID: 1659430759}
   - {fileID: 692523256}
-  - {fileID: 1466539434}
   - {fileID: 1884144910}
+  - {fileID: 1466539434}
   - {fileID: 1813492700}
   - {fileID: 1278640750}
   m_Father: {fileID: 0}
@@ -5832,8 +5832,8 @@ CanvasGroup:
   m_GameObject: {fileID: 1466539433}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1519172938
 GameObject:
@@ -7579,8 +7579,8 @@ CanvasGroup:
   m_GameObject: {fileID: 1884144909}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1901670213
 GameObject:
