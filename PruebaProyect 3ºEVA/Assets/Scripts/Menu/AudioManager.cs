@@ -17,7 +17,8 @@ public class AudioManager : MonoBehaviour
 
     [Header("Efectos de sonido")]
     public AudioClip footstepSFX;
-    public AudioClip buttonSFX;
+    public AudioClip buttonClickSFX;   // Sonido al clickar
+    public AudioClip buttonHoverSFX;   // Sonido al pasar por encima
     public AudioClip deathSFX;
     public AudioClip respawnSFX;
 
@@ -47,11 +48,9 @@ public class AudioManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Cargar volumenes guardados
         musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 1f);
         sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume", 1f);
 
-        // Cambiar musica segun escena
         switch (scene.name)
         {
             case "MainMenu":
@@ -72,13 +71,12 @@ public class AudioManager : MonoBehaviour
     private void PlayMusic(AudioClip clip)
     {
         if (clip == null) return;
-        if (musicSource.clip == clip) return;  // No reiniciar si es la misma musica
+        if (musicSource.clip == clip) return;
         musicSource.clip = clip;
         musicSource.loop = true;
         musicSource.Play();
     }
 
-    // Metodos publicos para efectos
     public void PlayFootstep()
     {
         if (footstepSFX != null)
@@ -87,8 +85,14 @@ public class AudioManager : MonoBehaviour
 
     public void PlayButton()
     {
-        if (buttonSFX != null)
-            sfxSource.PlayOneShot(buttonSFX);
+        if (buttonClickSFX != null)
+            sfxSource.PlayOneShot(buttonClickSFX);
+    }
+
+    public void PlayButtonHover()
+    {
+        if (buttonHoverSFX != null)
+            sfxSource.PlayOneShot(buttonHoverSFX);
     }
 
     public void PlayDeath()

@@ -9,7 +9,6 @@ public class MenuMagnetController : MonoBehaviour
     public RectTransform selector;
     public float moveSpeed = 10f;
     public float fadeDuration = 0.5f;
-
     [HideInInspector]
     public bool canSelect = false;
 
@@ -23,20 +22,17 @@ public class MenuMagnetController : MonoBehaviour
             selectorCanvas = selector.GetComponent<CanvasGroup>();
             if (selectorCanvas == null)
                 selectorCanvas = selector.gameObject.AddComponent<CanvasGroup>();
-
             selectorCanvas.alpha = 0f;
             selectorCanvas.interactable = false;
             selectorCanvas.blocksRaycasts = false;
         }
 
-        // Aseguramos que solo el primer botón esté seleccionado
         for (int i = 0; i < buttons.Length; i++)
             buttons[i].isSelected = (i == currentIndex);
     }
 
     void Update()
     {
-        // Esperamos a que los botones terminen su animación
         if (!canSelect)
         {
             bool allFinished = true;
@@ -49,7 +45,6 @@ public class MenuMagnetController : MonoBehaviour
                     break;
                 }
             }
-
             if (allFinished)
             {
                 canSelect = true;
@@ -59,20 +54,16 @@ public class MenuMagnetController : MonoBehaviour
 
         if (!canSelect || selectorCanvas.alpha < 1f) return;
 
-        // --- INPUT TECLADO ---
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             ChangeIndex(-1);
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             ChangeIndex(1);
 
-        // Mover selector suavemente
         Vector3 targetPos = new Vector3(selector.position.x, buttons[currentIndex].transform.position.y, selector.position.z);
         selector.position = Vector3.Lerp(selector.position, targetPos, Time.deltaTime * moveSpeed);
 
-        // Ejecutar acción
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            // Sincronizamos currentIndex con el botón que está realmente seleccionado
             for (int i = 0; i < buttons.Length; i++)
             {
                 if (buttons[i].isSelected)
@@ -81,7 +72,6 @@ public class MenuMagnetController : MonoBehaviour
                     break;
                 }
             }
-
             buttons[currentIndex].GetComponent<Button>().onClick.Invoke();
         }
     }
@@ -95,7 +85,6 @@ public class MenuMagnetController : MonoBehaviour
             selectorCanvas.alpha = Mathf.Clamp01(elapsed / fadeDuration);
             yield return null;
         }
-
         selectorCanvas.alpha = 1f;
         selectorCanvas.interactable = true;
         selectorCanvas.blocksRaycasts = true;
@@ -108,5 +97,7 @@ public class MenuMagnetController : MonoBehaviour
         if (currentIndex < 0) currentIndex = buttons.Length - 1;
         if (currentIndex >= buttons.Length) currentIndex = 0;
         buttons[currentIndex].isSelected = true;
+
+        AudioManager.instance.PlayButtonHover();
     }
 }
