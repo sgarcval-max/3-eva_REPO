@@ -18,7 +18,8 @@ public class LevelFinish2 : MonoBehaviour
     public CountdownTimer countdownTimer;
     public string nextLevelName;
 
-    private int playersInside = 0;
+    private bool player1Inside = false;
+    private bool player2Inside = false;
     private bool finished = false;
 
     private void Start()
@@ -32,8 +33,12 @@ public class LevelFinish2 : MonoBehaviour
     {
         if (other.CompareTag("Player") && !finished)
         {
-            playersInside++;
-            if (playersInside >= 2)
+            if (other.gameObject.name == "Player1")
+                player1Inside = true;
+            else if (other.gameObject.name == "Player2")
+                player2Inside = true;
+
+            if (player1Inside && player2Inside)
             {
                 finished = true;
                 PlayerPrefs.SetInt("Level2Completed", 1);
@@ -41,6 +46,17 @@ public class LevelFinish2 : MonoBehaviour
                 countdownTimer.StopTimer();
                 StartCoroutine(ShowWinPanel());
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && !finished)
+        {
+            if (other.gameObject.name == "Player1")
+                player1Inside = false;
+            else if (other.gameObject.name == "Player2")
+                player2Inside = false;
         }
     }
 

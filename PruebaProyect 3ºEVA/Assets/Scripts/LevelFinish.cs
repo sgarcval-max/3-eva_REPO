@@ -16,15 +16,20 @@ public class LevelFinish : MonoBehaviour
     [Header("Referencias")]
     public CountdownTimer countdownTimer;
 
-    private int playersInside = 0;
+    private bool player1Inside = false;
+    private bool player2Inside = false;
     private bool finished = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !finished)
         {
-            playersInside++;
-            if (playersInside >= 2)
+            if (other.gameObject.name == "Player1")
+                player1Inside = true;
+            else if (other.gameObject.name == "Player2")
+                player2Inside = true;
+
+            if (player1Inside && player2Inside)
             {
                 finished = true;
                 countdownTimer.StopTimer();
@@ -33,12 +38,22 @@ public class LevelFinish : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && !finished)
+        {
+            if (other.gameObject.name == "Player1")
+                player1Inside = false;
+            else if (other.gameObject.name == "Player2")
+                player2Inside = false;
+        }
+    }
+
     private IEnumerator ShowWinPanel()
     {
         winText.text = "NIVEL COMPLETADO";
         winPanel.interactable = true;
         winPanel.blocksRaycasts = true;
-
         PlayerPrefs.SetInt("Level1Completed", 1);
         PlayerPrefs.Save();
 
