@@ -66,11 +66,11 @@ public class LevelFinish2 : MonoBehaviour
 
     private void NextLevel()
     {
-        SceneManager.LoadScene(nextLevelName);
+        FadeManager.instance.LoadScene(nextLevelName);
     }
 
     private void GoToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        FadeManager.instance.LoadScene("MainMenu");
     }
 }

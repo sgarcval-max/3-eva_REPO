@@ -56,6 +56,6 @@ public class LevelFinishLast : MonoBehaviour
 
     private void GoToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        FadeManager.instance.LoadScene("MainMenu");
     }
 }

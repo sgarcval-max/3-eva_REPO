@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -23,7 +22,7 @@ public class MainMenu : MonoBehaviour
     {
         mainPanel.SetActive(false);
         levelSelectorPanel.SetActive(true);
-        imageToHide.SetActive(false);  // Oculta la imagen
+        imageToHide.SetActive(false);
     }
 
     public void OpenSettings()
@@ -37,7 +36,7 @@ public class MainMenu : MonoBehaviour
         mainPanel.SetActive(true);
         levelSelectorPanel.SetActive(false);
         settingsPanel.SetActive(false);
-        imageToHide.SetActive(true);  // Vuelve a mostrar la imagen
+        imageToHide.SetActive(true);
     }
 
     public void QuitGame()
