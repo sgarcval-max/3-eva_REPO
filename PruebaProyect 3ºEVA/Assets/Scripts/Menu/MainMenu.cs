@@ -38,6 +38,7 @@ public class MainMenu : MonoBehaviour
 
     public void OpenSettings()
     {
+        if (imageToHide != null) imageToHide.SetActive(false);
         StartCoroutine(PanelFader.instance.FadeFromTo(mainPanel, settingsPanel));
     }
 
@@ -49,6 +50,7 @@ public class MainMenu : MonoBehaviour
 
     public void BackToMainFromSettings()
     {
+        if (imageToHide != null) imageToHide.SetActive(true);
         StartCoroutine(PanelFader.instance.FadeFromTo(settingsPanel, mainPanel));
     }
 

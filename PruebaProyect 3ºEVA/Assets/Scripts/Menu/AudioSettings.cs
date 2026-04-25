@@ -7,39 +7,27 @@ public class AudioSettings : MonoBehaviour
     public Slider musicSlider;
     public Slider sfxSlider;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
     private void Start()
     {
-        // Cargar valores guardados
+        Debug.Log("MusicSlider: " + musicSlider);
+        Debug.Log("SFXSlider: " + sfxSlider);
+
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1f);
 
-        ApplyVolumes();
-
-        // Escuchar cambios en los sliders
         musicSlider.onValueChanged.AddListener(OnMusicChanged);
         sfxSlider.onValueChanged.AddListener(OnSFXChanged);
     }
 
     private void OnMusicChanged(float value)
     {
-        PlayerPrefs.SetFloat("MusicVolume", value);
-        ApplyVolumes();
+        Debug.Log("Music volume cambiado a: " + value);
+        AudioManager.instance.SetMusicVolume(value);
     }
 
     private void OnSFXChanged(float value)
     {
-        PlayerPrefs.SetFloat("SFXVolume", value);
-        ApplyVolumes();
-    }
-
-    private void ApplyVolumes()
-    {
-        AudioManager.instance.SetMusicVolume(musicSlider.value);
-        AudioManager.instance.SetSFXVolume(sfxSlider.value);
+        Debug.Log("SFX volume cambiado a: " + value);
+        AudioManager.instance.SetSFXVolume(value);
     }
 }

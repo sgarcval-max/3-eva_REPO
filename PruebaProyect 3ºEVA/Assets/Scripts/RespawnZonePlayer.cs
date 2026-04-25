@@ -10,14 +10,14 @@ public class RespawnZonePlayer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.PlayDeath();
+
             if (other.gameObject.name == "Player1")
-            {
                 other.transform.position = respawnPointPlayer1.position;
-            }
             else if (other.gameObject.name == "Player2")
-            {
                 other.transform.position = respawnPointPlayer2.position;
-            }
+
+            AudioManager.instance.PlayRespawn();
         }
     }
 }
