@@ -3,40 +3,53 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     [Header("Paneles")]
-    public GameObject mainPanel;
-    public GameObject levelSelectorPanel;
-    public GameObject settingsPanel;
+    public CanvasGroup mainPanel;
+    public CanvasGroup levelSelectorPanel;
+    public CanvasGroup settingsPanel;
 
     [Header("Imagen a ocultar")]
     public GameObject imageToHide;
 
     private void Start()
     {
-        mainPanel.SetActive(true);
-        levelSelectorPanel.SetActive(false);
-        settingsPanel.SetActive(false);
-        imageToHide.SetActive(true);
+        mainPanel.alpha = 1f;
+        mainPanel.interactable = true;
+        mainPanel.blocksRaycasts = true;
+
+        levelSelectorPanel.alpha = 0f;
+        levelSelectorPanel.interactable = false;
+        levelSelectorPanel.blocksRaycasts = false;
+        levelSelectorPanel.gameObject.SetActive(false);
+
+        settingsPanel.alpha = 0f;
+        settingsPanel.interactable = false;
+        settingsPanel.blocksRaycasts = false;
+        settingsPanel.gameObject.SetActive(false);
+
+        if (imageToHide != null)
+            imageToHide.SetActive(true);
     }
 
     public void OpenLevelSelector()
     {
-        mainPanel.SetActive(false);
-        levelSelectorPanel.SetActive(true);
-        imageToHide.SetActive(false);
+        if (imageToHide != null) imageToHide.SetActive(false);
+        StartCoroutine(PanelFader.instance.FadeFromTo(mainPanel, levelSelectorPanel));
     }
 
     public void OpenSettings()
     {
-        mainPanel.SetActive(false);
-        settingsPanel.SetActive(true);
+        StartCoroutine(PanelFader.instance.FadeFromTo(mainPanel, settingsPanel));
     }
 
-    public void BackToMain()
+    public void BackToMainFromLevelSelector()
     {
-        mainPanel.SetActive(true);
-        levelSelectorPanel.SetActive(false);
-        settingsPanel.SetActive(false);
-        imageToHide.SetActive(true);
+        if (imageToHide != null) imageToHide.SetActive(true);
+        StartCoroutine(PanelFader.instance.FadeFromTo(levelSelectorPanel, mainPanel));
+    }
+
+    public void BackToMainFromSettings()
+    {
+        StartCoroutine(PanelFader.instance.FadeFromTo(settingsPanel, mainPanel));
     }
 
     public void QuitGame()

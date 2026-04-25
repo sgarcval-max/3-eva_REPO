@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [Header("Paneles")]
-    public GameObject pausePanel;
-    public GameObject settingsPanel;
+    public CanvasGroup pausePanel;
+    public CanvasGroup settingsPanel;
 
     [Header("Referencias")]
     public CountdownTimer countdownTimer;
@@ -14,40 +14,41 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        pausePanel.SetActive(false);
-        settingsPanel.SetActive(false);
+        pausePanel.alpha = 0f;
+        pausePanel.interactable = false;
+        pausePanel.blocksRaycasts = false;
+        pausePanel.gameObject.SetActive(false);
+
+        settingsPanel.alpha = 0f;
+        settingsPanel.interactable = false;
+        settingsPanel.blocksRaycasts = false;
+        settingsPanel.gameObject.SetActive(false);
     }
 
     public void OpenPause()
     {
-        Debug.Log("OpenPause llamado, timeScale = " + Time.timeScale);
         isPaused = true;
-        pausePanel.SetActive(true);
-        settingsPanel.SetActive(false);
         Time.timeScale = 0f;
         countdownTimer.StopTimer();
-        Debug.Log("timeScale después = " + Time.timeScale);
+        StartCoroutine(PanelFader.instance.FadeIn(pausePanel));
     }
 
     public void Resume()
     {
         isPaused = false;
-        pausePanel.SetActive(false);
-        settingsPanel.SetActive(false);
         Time.timeScale = 1f;
         countdownTimer.ResumeTimer();
+        StartCoroutine(PanelFader.instance.FadeOut(pausePanel));
     }
 
     public void OpenSettings()
     {
-        pausePanel.SetActive(false);
-        settingsPanel.SetActive(true);
+        StartCoroutine(PanelFader.instance.FadeFromTo(pausePanel, settingsPanel));
     }
 
     public void BackToPause()
     {
-        pausePanel.SetActive(true);
-        settingsPanel.SetActive(false);
+        StartCoroutine(PanelFader.instance.FadeFromTo(settingsPanel, pausePanel));
     }
 
     public void GoToMenu()

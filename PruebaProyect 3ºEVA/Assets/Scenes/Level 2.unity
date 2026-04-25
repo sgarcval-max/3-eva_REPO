@@ -3552,8 +3552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e968a8af86180b9459b372952a067369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 782353614}
-  settingsPanel: {fileID: 841577345}
+  pausePanel: {fileID: 782353618}
+  settingsPanel: {fileID: 841577349}
   countdownTimer: {fileID: 766533086}
 --- !u!4 &270280207
 Transform:
@@ -7266,13 +7266,14 @@ GameObject:
   - component: {fileID: 782353615}
   - component: {fileID: 782353617}
   - component: {fileID: 782353616}
+  - component: {fileID: 782353618}
   m_Layer: 5
   m_Name: PanelPauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &782353615
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7333,6 +7334,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782353614}
   m_CullTransparentMesh: 1
+--- !u!225 &782353618
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782353614}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &786489743
 GameObject:
   m_ObjectHideFlags: 0
@@ -7851,13 +7864,14 @@ GameObject:
   - component: {fileID: 841577346}
   - component: {fileID: 841577348}
   - component: {fileID: 841577347}
+  - component: {fileID: 841577349}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &841577346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7916,6 +7930,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841577345}
   m_CullTransparentMesh: 1
+--- !u!225 &841577349
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841577345}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &843585102
 GameObject:
   m_ObjectHideFlags: 0
@@ -12459,6 +12485,51 @@ Transform:
   m_LocalPosition: {x: 21.9, y: -8.12, z: 0}
   m_LocalScale: {x: 2.9000003, y: 2.9000003, z: 2.9000003}
   m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1097391420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097391422}
+  - component: {fileID: 1097391421}
+  m_Layer: 0
+  m_Name: PanelFader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1097391421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097391420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f819bc93e9721e347a70aa0dfd674eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 0.3
+--- !u!4 &1097391422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097391420}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.24741, y: -2.89357, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19770,4 +19841,5 @@ SceneRoots:
   - {fileID: 243896836}
   - {fileID: 766533089}
   - {fileID: 270280207}
+  - {fileID: 1097391422}
   - {fileID: 526277479}
