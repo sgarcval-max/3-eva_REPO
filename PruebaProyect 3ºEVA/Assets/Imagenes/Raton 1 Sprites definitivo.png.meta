@@ -1,0 +1,554 @@
+fileFormatVersion: 2
+guid: 16888c29a4a4850458b1911184918a04
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1674879059261423509
+    second: Raton 1 Sprites definitivo_0
+  - first:
+      213: 1391362550213575509
+    second: Raton 1 Sprites definitivo_1
+  - first:
+      213: 6813878451089862071
+    second: Raton 1 Sprites definitivo_2
+  - first:
+      213: 243601737789913418
+    second: Raton 1 Sprites definitivo_3
+  - first:
+      213: -5346715194198419895
+    second: Raton 1 Sprites definitivo_4
+  - first:
+      213: 7943005172534317385
+    second: Raton 1 Sprites definitivo_5
+  - first:
+      213: -7666524551117522877
+    second: Raton 1 Sprites definitivo_6
+  - first:
+      213: -1085226324585808745
+    second: Raton 1 Sprites definitivo_7
+  - first:
+      213: -3262047667072724406
+    second: Raton 1 Sprites definitivo_8
+  - first:
+      213: -8896889035695847820
+    second: Raton 1 Sprites definitivo_9
+  - first:
+      213: 6293243547616379162
+    second: Raton 1 Sprites definitivo_10
+  - first:
+      213: 5675203202268301698
+    second: Raton 1 Sprites definitivo_11
+  - first:
+      213: 3629254546899604233
+    second: Raton 1 Sprites definitivo_12
+  - first:
+      213: 7815086407145716651
+    second: Raton 1 Sprites definitivo_13
+  - first:
+      213: 119546738611818208
+    second: Raton 1 Sprites definitivo_14
+  - first:
+      213: -7734124806739295852
+    second: Raton 1 Sprites definitivo_15
+  - first:
+      213: 8966967662601132933
+    second: Raton 1 Sprites definitivo_16
+  - first:
+      213: -4844242528366255089
+    second: Raton 1 Sprites definitivo_17
+  - first:
+      213: -596953459914369518
+    second: Raton 1 Sprites definitivo_18
+  - first:
+      213: -1040919306083918006
+    second: Raton 1 Sprites definitivo_19
+  - first:
+      213: 6511634765526667020
+    second: Raton 1 Sprites definitivo_20
+  - first:
+      213: -3548734554817988621
+    second: Raton 1 Sprites definitivo_21
+  - first:
+      213: -6240754337251890364
+    second: Raton 1 Sprites definitivo_22
+  - first:
+      213: -326249097687345183
+    second: Raton 1 Sprites definitivo_23
+  - first:
+      213: 2729654221733534983
+    second: Raton 1 Sprites definitivo_24
+  - first:
+      213: -549706478380913231
+    second: Raton 1 Sprites definitivo_25
+  - first:
+      213: 1696690775537214590
+    second: Raton 1 Sprites definitivo_26
+  - first:
+      213: -7635107979077175875
+    second: Raton 1 Sprites definitivo_27
+  - first:
+      213: -8730291323443269737
+    second: Raton 1 Sprites definitivo_28
+  - first:
+      213: 2678399607263393205
+    second: Raton 1 Sprites definitivo_29
+  - first:
+      213: -5344105339176807397
+    second: Raton 1 Sprites definitivo_30
+  - first:
+      213: 4104762140333136396
+    second: Raton 1 Sprites definitivo_31
+  - first:
+      213: 56085987235601482
+    second: Raton 1 Sprites definitivo_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b608bf69e52a1c8e0800000000000000
+      internalID: -1674879059261423509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553034f1edc1f4310800000000000000
+      internalID: 1391362550213575509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd66eb8952cf8e50800000000000000
+      internalID: 6813878451089862071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49b2a76d72716300800000000000000
+      internalID: 243601737789913418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9469e96ebd6acc5b0800000000000000
+      internalID: -5346715194198419895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9419ffdde193b3e60800000000000000
+      internalID: 7943005172534317385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_6
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34834dc2a880b9590800000000000000
+      internalID: -7666524551117522877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a421dbb0ee0eab2d0800000000000000
+      internalID: -3262047667072724406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476084d4f86e78480800000000000000
+      internalID: -8896889035695847820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_10
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1181bcd9a7165750800000000000000
+      internalID: 6293243547616379162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2898c537e3f52ce40800000000000000
+      internalID: 5675203202268301698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9031c6328c3bd5230800000000000000
+      internalID: 3629254546899604233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_13
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab77e26ea3c47c60800000000000000
+      internalID: 7815086407145716651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raton 1 Sprites definitivo_14
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee83091027b8a100800000000000000
+      internalID: 119546738611818208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2152479700c0ba741be3143271150b4a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1024.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Raton 1 Sprites definitivo_0: -1674879059261423509
+      Raton 1 Sprites definitivo_1: 1391362550213575509
+      Raton 1 Sprites definitivo_10: 6293243547616379162
+      Raton 1 Sprites definitivo_11: 5675203202268301698
+      Raton 1 Sprites definitivo_12: 3629254546899604233
+      Raton 1 Sprites definitivo_13: 7815086407145716651
+      Raton 1 Sprites definitivo_14: 119546738611818208
+      Raton 1 Sprites definitivo_2: 6813878451089862071
+      Raton 1 Sprites definitivo_3: 243601737789913418
+      Raton 1 Sprites definitivo_4: -5346715194198419895
+      Raton 1 Sprites definitivo_5: 7943005172534317385
+      Raton 1 Sprites definitivo_6: -7666524551117522877
+      Raton 1 Sprites definitivo_7: -1085226324585808745
+      Raton 1 Sprites definitivo_8: -3262047667072724406
+      Raton 1 Sprites definitivo_9: -8896889035695847820
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
