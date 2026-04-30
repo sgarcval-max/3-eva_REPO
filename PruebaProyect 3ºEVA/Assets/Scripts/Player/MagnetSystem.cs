@@ -11,11 +11,15 @@ public class MagnetSystem : MonoBehaviour
     public LayerMask metalLayer;
 
     [Header("Particle System")]
-    public ParticleSystem beamParticles;  // El sistema de partículas del rayo
+    public ParticleSystem beamParticles;
+
+    [Header("Referencias")]
+    public PlayerMovement playerMovement;
 
     private Rigidbody2D rb;
     private PlayerSetup setup;
-    private Rigidbody2D currentTarget;
+
+    public Rigidbody2D currentTarget;
     private MetalObject currentMetal;
 
     void Awake()
@@ -23,7 +27,6 @@ public class MagnetSystem : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         setup = GetComponent<PlayerSetup>();
 
-        // Aseguramos que las partículas están apagadas al inicio
         if (beamParticles != null)
             beamParticles.Stop();
     }
@@ -34,16 +37,21 @@ public class MagnetSystem : MonoBehaviour
         {
             FindMetal();
             StopBeam();
+            if (playerMovement != null)
+                playerMovement.SetMagnetAnimation(false);
         }
         else
         {
             AffectCurrentMetal();
+            if (playerMovement != null)
+                playerMovement.SetMagnetAnimation(true);
         }
     }
 
     void FindMetal()
     {
         Collider2D[] metals = Physics2D.OverlapCircleAll(rb.position, magnetRange, metalLayer);
+
         float closestDistance = float.MaxValue;
         Rigidbody2D closestRb = null;
         MetalObject closestMetal = null;
@@ -52,6 +60,7 @@ public class MagnetSystem : MonoBehaviour
         {
             Rigidbody2D metalRb = col.GetComponent<Rigidbody2D>();
             if (metalRb == null) continue;
+
             MetalObject metal = col.GetComponent<MetalObject>();
             if (metal == null) continue;
 
@@ -93,7 +102,6 @@ public class MagnetSystem : MonoBehaviour
             return;
         }
 
-        // Actualizar el rayo
         UpdateBeam(myPos, targetPos);
 
         float strength = magnetStrength / (distance * distance);
@@ -110,20 +118,16 @@ public class MagnetSystem : MonoBehaviour
     {
         if (beamParticles == null) return;
 
-        // Posicionar las particulas en el imán
         beamParticles.transform.position = from;
 
-        // Rotar hacia el objetivo
         Vector2 dir = (to - from).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         beamParticles.transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
-        // Ajustar la distancia del rayo
         float distance = Vector2.Distance(from, to);
         var main = beamParticles.main;
         main.startLifetime = distance / main.startSpeed.constant;
 
-        // Activar si no estaba activo
         if (!beamParticles.isPlaying)
             beamParticles.Play();
     }
@@ -139,5 +143,7 @@ public class MagnetSystem : MonoBehaviour
         currentTarget = null;
         currentMetal = null;
         StopBeam();
+        if (playerMovement != null)
+            playerMovement.SetMagnetAnimation(false);
     }
 }

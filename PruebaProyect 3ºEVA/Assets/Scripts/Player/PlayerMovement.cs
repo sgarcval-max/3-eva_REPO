@@ -35,14 +35,16 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateAnimations()
     {
-        // Running
         animator.SetBool("isRunning", moveInput != 0 && isGrounded);
-
-        // Jumping
         animator.SetBool("isJumping", !isGrounded && rb.linearVelocity.y > 0);
-
-        // Falling
         animator.SetBool("isFalling", !isGrounded && rb.linearVelocity.y < 0);
+    }
+
+    // Método público para que MagnetSystem active la animación
+    public void SetMagnetAnimation(bool isActive)
+    {
+        animator.SetBool("isMagneting", isActive);
+        Debug.Log("SetMagnetAnimation: " + isActive);
     }
 
     public void OnMove(InputAction.CallbackContext context)

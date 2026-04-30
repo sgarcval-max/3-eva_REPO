@@ -353,6 +353,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   beamParticles: {fileID: 0}
+  playerMovement: {fileID: 7236727606257131813}
+  currentTarget: {fileID: 0}
 --- !u!114 &850424472736603631
 MonoBehaviour:
   m_ObjectHideFlags: 0
