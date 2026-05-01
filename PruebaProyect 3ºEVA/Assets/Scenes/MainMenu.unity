@@ -3902,7 +3902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1111547619}
   sfxSource: {fileID: 965768084}
-  mainMenuMusic: {fileID: 8300000, guid: f38387680dd9b1744a8927e3069d4631, type: 3}
+  mainMenuMusic: {fileID: 8300000, guid: 288a87c591d9c2d4da55f7c1f7eb6e3d, type: 3}
   level1Music: {fileID: 8300000, guid: 5004449b1a6de1f49b735fe13301c195, type: 3}
   level2Music: {fileID: 8300000, guid: 7622b7fceade15940a54bcc5a83178e1, type: 3}
   level3Music: {fileID: 0}
