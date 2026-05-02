@@ -3906,7 +3906,7 @@ MonoBehaviour:
   level1Music: {fileID: 8300000, guid: 5004449b1a6de1f49b735fe13301c195, type: 3}
   level2Music: {fileID: 8300000, guid: 7622b7fceade15940a54bcc5a83178e1, type: 3}
   level3Music: {fileID: 0}
-  footstepSFX: {fileID: 8300000, guid: 171e691a5898d5c4896f60a990718a2f, type: 3}
+  footstepSFX: {fileID: 0}
   buttonClickSFX: {fileID: 8300000, guid: 1f7f30f831d786b44a4edf4c702cb4bc, type: 3}
   buttonHoverSFX: {fileID: 8300000, guid: 1bf8afed9171e2c488332b01dec3cb98, type: 3}
   deathSFX: {fileID: 8300000, guid: 388ab1274ee1ebd41a704fb7ae99465d, type: 3}
