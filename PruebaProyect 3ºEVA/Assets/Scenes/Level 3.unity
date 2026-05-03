@@ -22720,7 +22720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d337e4156546b54792b9ad38ca8a8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 160
+  totalTime: 120
   timerText: {fileID: 2086561674}
   gameOverPanel: {fileID: 1108220611}
   retryButton: {fileID: 1111795394}
@@ -23288,8 +23288,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NIVEL COMPLETADO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
+  m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
