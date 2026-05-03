@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -15,10 +16,15 @@ public class AudioManager : MonoBehaviour
     public AudioClip level2Music;
     public AudioClip level3Music;
 
+    [Header("Musica de paneles")]
+    public AudioClip levelCompleteMusic;
+    public AudioClip gameCompleteMusic;
+    public AudioClip gameOverMusic;
+
     [Header("Efectos de sonido")]
     public AudioClip footstepSFX;
-    public AudioClip buttonClickSFX;   // Sonido al clickar
-    public AudioClip buttonHoverSFX;   // Sonido al pasar por encima
+    public AudioClip buttonClickSFX;
+    public AudioClip buttonHoverSFX;
     public AudioClip deathSFX;
     public AudioClip respawnSFX;
 
@@ -74,6 +80,47 @@ public class AudioManager : MonoBehaviour
         if (musicSource.clip == clip) return;
         musicSource.clip = clip;
         musicSource.loop = true;
+        musicSource.Play();
+    }
+
+    public void PlayLevelComplete()
+    {
+        PlayPanelMusic(levelCompleteMusic, 0.3f);
+    }
+
+    public void PlayGameComplete()
+    {
+        PlayPanelMusic(gameCompleteMusic, 0.3f);
+    }
+
+    public void PlayGameOver()
+    {
+        PlayPanelMusic(gameOverMusic, 0.3f);
+    }
+
+    private void PlayPanelMusic(AudioClip clip, float fadeDuration = 1f)
+    {
+        StartCoroutine(FadeOutAndPlay(clip, fadeDuration));
+    }
+
+    private IEnumerator FadeOutAndPlay(AudioClip clip, float fadeDuration)
+    {
+        float startVolume = musicSource.volume;
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            musicSource.volume = Mathf.Lerp(startVolume, 0f, elapsed / fadeDuration);
+            yield return null;
+        }
+
+        musicSource.volume = 0f;
+        musicSource.Stop();
+
+        musicSource.clip = clip;
+        musicSource.loop = false;
+        musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 1f);
         musicSource.Play();
     }
 

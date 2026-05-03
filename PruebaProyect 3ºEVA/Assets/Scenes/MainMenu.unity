@@ -3906,6 +3906,9 @@ MonoBehaviour:
   level1Music: {fileID: 8300000, guid: 99248fcd12b044f42a82bfb7b03a8c79, type: 3}
   level2Music: {fileID: 8300000, guid: 46484abf29b0baa4baf6c87ed865b695, type: 3}
   level3Music: {fileID: 8300000, guid: bde1cd42422593240bd35c8b51609424, type: 3}
+  levelCompleteMusic: {fileID: 8300000, guid: 4e501b03550e31d42b1086375c9f26cc, type: 3}
+  gameCompleteMusic: {fileID: 8300000, guid: 900c669eb9274014885cba70de6d2347, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: fb6493b23a59a9a4a9c80cbed44ed2a4, type: 3}
   footstepSFX: {fileID: 0}
   buttonClickSFX: {fileID: 8300000, guid: 1f7f30f831d786b44a4edf4c702cb4bc, type: 3}
   buttonHoverSFX: {fileID: 8300000, guid: 1bf8afed9171e2c488332b01dec3cb98, type: 3}

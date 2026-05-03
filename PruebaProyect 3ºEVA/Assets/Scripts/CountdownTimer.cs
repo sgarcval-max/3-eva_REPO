@@ -91,6 +91,8 @@ public class CountdownTimer : MonoBehaviour
 
         retryButton.onClick.AddListener(Retry);
         menuButton.onClick.AddListener(GoToMenu);
+
+        AudioManager.instance.PlayGameOver();
     }
 
     private void Retry()

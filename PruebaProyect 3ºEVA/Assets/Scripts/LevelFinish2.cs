@@ -78,6 +78,8 @@ public class LevelFinish2 : MonoBehaviour
 
         nextLevelButton.onClick.AddListener(NextLevel);
         menuButton.onClick.AddListener(GoToMenu);
+
+        AudioManager.instance.PlayLevelComplete();
     }
 
     private void NextLevel()

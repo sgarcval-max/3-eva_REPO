@@ -73,6 +73,8 @@ public class LevelFinishLast : MonoBehaviour
         winPanel.alpha = 1f;
 
         menuButton.onClick.AddListener(GoToMenu);
+
+        AudioManager.instance.PlayGameComplete();
     }
 
     private void GoToMenu()
