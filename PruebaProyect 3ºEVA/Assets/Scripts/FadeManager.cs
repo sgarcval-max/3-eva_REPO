@@ -37,7 +37,6 @@ public class FadeManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Cada vez que se carga una escena hace FadeIn
         StartCoroutine(FadeIn());
     }
 
@@ -69,28 +68,51 @@ public class FadeManager : MonoBehaviour
     {
         fadePanel.alpha = 1f;
         fadePanel.blocksRaycasts = true;
+
         float elapsed = 0f;
         while (elapsed < fadeDuration)
         {
             elapsed += Time.deltaTime;
-            fadePanel.alpha = Mathf.Lerp(1f, 0f, elapsed / fadeDuration);
+            float t = Mathf.Clamp01(elapsed / fadeDuration);
+            fadePanel.alpha = Mathf.Lerp(1f, 0f, t);
+
+            // Fade in de audio
+            if (AudioManager.instance != null)
+                AudioManager.instance.musicSource.volume = Mathf.Lerp(0f, PlayerPrefs.GetFloat("MusicVolume", 1f), t);
+
             yield return null;
         }
+
         fadePanel.alpha = 0f;
         fadePanel.blocksRaycasts = false;
+
+        if (AudioManager.instance != null)
+            AudioManager.instance.musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 1f);
     }
 
     public IEnumerator FadeToScene(string sceneName)
     {
         fadePanel.blocksRaycasts = true;
+
         float elapsed = 0f;
         while (elapsed < fadeDuration)
         {
             elapsed += Time.deltaTime;
-            fadePanel.alpha = Mathf.Lerp(0f, 1f, elapsed / fadeDuration);
+            float t = Mathf.Clamp01(elapsed / fadeDuration);
+            fadePanel.alpha = Mathf.Lerp(0f, 1f, t);
+
+            // Fade out de audio
+            if (AudioManager.instance != null)
+                AudioManager.instance.musicSource.volume = Mathf.Lerp(PlayerPrefs.GetFloat("MusicVolume", 1f), 0f, t);
+
             yield return null;
         }
+
         fadePanel.alpha = 1f;
+
+        if (AudioManager.instance != null)
+            AudioManager.instance.musicSource.volume = 0f;
+
         SceneManager.LoadScene(sceneName);
     }
 

@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isRunning", moveInput != 0 && isGrounded);
         animator.SetBool("isJumping", !isGrounded && rb.linearVelocity.y > 0);
         animator.SetBool("isFalling", !isGrounded && rb.linearVelocity.y < 0);
+
+        Debug.Log("isGrounded: " + isGrounded + " | velocityY: " + rb.linearVelocity.y + " | isFalling: " + (!isGrounded && rb.linearVelocity.y < 0));
     }
 
     // Método público para que MagnetSystem active la animación
@@ -73,5 +75,14 @@ public class PlayerMovement : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
+        }
     }
 }
