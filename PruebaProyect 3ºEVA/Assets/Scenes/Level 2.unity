@@ -3537,7 +3537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 421.99985, y: -96.000046}
+  m_AnchoredPosition: {x: 426.00003, y: -100.00008}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &263685349
@@ -8303,7 +8303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -374.99994, y: -103.999954}
+  m_AnchoredPosition: {x: -395, y: -103.999954}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432420932
@@ -8341,7 +8341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MUSICA
+  m_text: 'MUSICA:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -20774,7 +20774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 421.99985, y: 193.00005}
+  m_AnchoredPosition: {x: 426, y: 189}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1538313965
@@ -24639,7 +24639,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -467.99997, y: 184}
+  m_AnchoredPosition: {x: -448, y: 184}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920536833
@@ -24677,7 +24677,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'EFECTOS
+  m_text: 'EFECTOS:
 
 '
   m_isRightToLeft: 0
