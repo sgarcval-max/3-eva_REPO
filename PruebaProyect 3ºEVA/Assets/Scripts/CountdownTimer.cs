@@ -57,9 +57,9 @@ public class CountdownTimer : MonoBehaviour
         }
 
         if (minutes >= 1)
-            return string.Format("{0:00}:{1:00} mins", minutes, seconds);
+            return string.Format("{0:00}:{1:00}", minutes, seconds);
         else
-            return string.Format("{0:00} s", seconds);
+            return string.Format("{0:00}", seconds);
     }
 
     public void StopTimer()
@@ -74,7 +74,6 @@ public class CountdownTimer : MonoBehaviour
 
     private IEnumerator ShowGameOver()
     {
-        // Esperamos a que termine el fade antes de pausar
         gameOverPanel.interactable = true;
         gameOverPanel.blocksRaycasts = true;
 
@@ -87,23 +86,22 @@ public class CountdownTimer : MonoBehaviour
         }
 
         gameOverPanel.alpha = 1f;
-        Time.timeScale = 0f;  // Pausar el juego cuando el panel ya está visible
+        Time.timeScale = 0f;
 
         retryButton.onClick.AddListener(Retry);
         menuButton.onClick.AddListener(GoToMenu);
-
         AudioManager.instance.PlayGameOver();
     }
 
     private void Retry()
     {
-        Time.timeScale = 1f;  // Reanudar antes de reiniciar
+        Time.timeScale = 1f;
         FadeManager.instance.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void GoToMenu()
     {
-        Time.timeScale = 1f;  // Reanudar antes de ir al menú
+        Time.timeScale = 1f;
         FadeManager.instance.LoadScene("MainMenu");
     }
 }
