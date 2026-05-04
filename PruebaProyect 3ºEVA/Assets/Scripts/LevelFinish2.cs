@@ -62,7 +62,7 @@ public class LevelFinish2 : MonoBehaviour
 
     private IEnumerator ShowWinPanel()
     {
-        winText.text = "NIVEL COMPLETADO";
+        winText.text = "LEVEL COMPLETED";
         winPanel.interactable = true;
         winPanel.blocksRaycasts = true;
 

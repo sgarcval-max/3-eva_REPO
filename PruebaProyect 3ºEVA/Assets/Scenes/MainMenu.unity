@@ -672,7 +672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Pulsa ESPACIO para continuar"'
+  m_text: "\r\"Press SPACE to continue\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1430,7 +1430,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nivel 3
+  m_text: Level 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -1830,7 +1830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Completar \nnivel 2"
+  m_text: "Complete \nLevel 2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -1986,7 +1986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'MUSICA:'
+  m_text: 'MUSIC:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -2310,7 +2310,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Completar \nnivel 1"
+  m_text: 'Complete
+
+    Level 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -2859,7 +2861,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Atras
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -4095,7 +4097,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'EFECTOS:
+  m_text: 'EFFECTS:
 
 '
   m_isRightToLeft: 0
@@ -4323,7 +4325,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Nivel 1
+  m_text: 'Level 1
 
 '
   m_isRightToLeft: 0
@@ -4461,7 +4463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nivel 2
+  m_text: Level 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -5428,7 +5430,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Atras
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}

@@ -58,7 +58,7 @@ public class LevelFinishLast : MonoBehaviour
 
     private IEnumerator ShowWinPanel()
     {
-        winText.text = "JUEGO COMPLETADO";
+        winText.text = "GAME COMPLETED";
         winPanel.interactable = true;
         winPanel.blocksRaycasts = true;
 

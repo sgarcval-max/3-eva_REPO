@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Volver al Men\xFA\n"
+  m_text: "Return to Menu\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -4071,7 +4071,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Volver al Men\xFA\n"
+  m_text: "Return to Menu\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -5164,7 +5164,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Siguiente Nivel
+  m_text: "Next Level\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -5300,7 +5300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Reintentar
+  m_text: 'Retry
 
 '
   m_isRightToLeft: 0
@@ -5699,9 +5699,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'EFECTOS:
-
-'
+  m_text: 'EFFECTS:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -5895,7 +5893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Atras
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -8244,7 +8242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'MUSICA:'
+  m_text: 'MUSIC:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -8494,7 +8492,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NIVEL COMPLETADO
+  m_text: "LEVEL COMPLETED\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -8622,7 +8620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Volver al Men\xFA\n"
+  m_text: "\rReturn to Menu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -9510,9 +9508,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Reanudar
-
-'
+  m_text: Resume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
@@ -11083,7 +11079,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ajustes
+  m_text: Settings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}
   m_sharedMaterial: {fileID: 537443384240680909, guid: d273cf479ce10a045a5301b8060bb2a2, type: 2}

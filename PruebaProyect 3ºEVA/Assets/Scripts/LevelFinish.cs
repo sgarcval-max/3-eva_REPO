@@ -51,7 +51,7 @@ public class LevelFinish : MonoBehaviour
 
     private IEnumerator ShowWinPanel()
     {
-        winText.text = "NIVEL COMPLETADO";
+        winText.text = "LEVEL COMPLETED";
         winPanel.interactable = true;
         winPanel.blocksRaycasts = true;
         PlayerPrefs.SetInt("Level1Completed", 1);
