@@ -7077,7 +7077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 182520466}
   - component: {fileID: 182520467}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_10 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7401,7 +7401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 226403803}
   - component: {fileID: 226403804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_10 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7753,7 +7753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307836187}
   - component: {fileID: 307836188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_10 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8645,7 +8645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375372128}
   - component: {fileID: 375372129}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_18 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8868,7 +8868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 407695666}
   - component: {fileID: 407695667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12044,7 +12044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 788784402}
   - component: {fileID: 788784403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_18 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17081,7 +17081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 857797218}
   - component: {fileID: 857797219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_10 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17543,13 +17543,47 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 915697703}
     m_ColliderPaths:
-    - - X: -273627840
-        Y: 166603490
-      - X: -273627840
+    - - X: -478827808
+        Y: 166603546
+      - X: -478827808
         Y: 166583984
-      - X: -250850112
+      - X: -456050112
         Y: 166583984
-      - X: -250827824
+      - X: -456027840
+        Y: 166603518
+      - X: -456027840
+        Y: 166583984
+      - X: -433250080
+        Y: 166583984
+      - X: -433227840
+        Y: 166603495
+      - X: -433227840
+        Y: 166583984
+      - X: -410450112
+        Y: 166583984
+      - X: -410327648
+        Y: 166691392
+      - X: -410327648
+        Y: 180052720
+      - X: -388841312
+        Y: 180052720
+      - X: -387494240
+        Y: 188539040
+      - X: -387494240
+        Y: 197455056
+      - X: -391412992
+        Y: 200140608
+      - X: -501616704
+        Y: 200140608
+      - X: -501616704
+        Y: 180119136
+      - X: -501627808
+        Y: 180119136
+      - X: -501627808
+        Y: 166583984
+      - X: -478850112
+        Y: 166583984
+    - - X: -250827824
         Y: 166603529
       - X: -250827824
         Y: 166583984
@@ -17633,59 +17667,13 @@ CompositeCollider2D:
         Y: 198314432
       - X: -296438976
         Y: 181341776
-      - X: -296322791
-        Y: 180119136
-      - X: -296427808
-        Y: 180119136
-      - X: -296427808
+      - X: -296316480
+        Y: 180052720
+      - X: -273627840
+        Y: 180052720
+      - X: -273627840
         Y: 166583984
-      - X: -273650080
-        Y: 166583984
-    - - X: -478827808
-        Y: 166603546
-      - X: -478827808
-        Y: 166583984
-      - X: -456050112
-        Y: 166583984
-      - X: -456027840
-        Y: 166603518
-      - X: -456027840
-        Y: 166583984
-      - X: -433250080
-        Y: 166583984
-      - X: -433227840
-        Y: 166603495
-      - X: -433227840
-        Y: 166583984
-      - X: -410450112
-        Y: 166583984
-      - X: -410427872
-        Y: 166603490
-      - X: -410427872
-        Y: 166583984
-      - X: -387650112
-        Y: 166583984
-      - X: -387527648
-        Y: 166691392
-      - X: -387527648
-        Y: 180119136
-      - X: -388830769
-        Y: 180119136
-      - X: -387494240
-        Y: 188539040
-      - X: -387494240
-        Y: 197455056
-      - X: -391412992
-        Y: 200140608
-      - X: -501616704
-        Y: 200140608
-      - X: -501616704
-        Y: 180119136
-      - X: -501627808
-        Y: 180119136
-      - X: -501627808
-        Y: 166583984
-      - X: -478850112
+      - X: -250850112
         Y: 166583984
     - - X: 501705792
         Y: 148539040
@@ -17957,33 +17945,7 @@ CompositeCollider2D:
         Y: -279947296
   m_CompositePaths:
     m_Paths:
-    - - {x: -47.88502, y: 16.658398}
-      - {x: -47.882782, y: 16.660276}
-      - {x: -47.88275, y: 16.658398}
-      - {x: -45.605007, y: 16.658405}
-      - {x: -45.602783, y: 16.660275}
-      - {x: -45.602757, y: 16.658398}
-      - {x: -43.325, y: 16.658405}
-      - {x: -43.322784, y: 16.660273}
-      - {x: -43.322754, y: 16.658398}
-      - {x: -41.045006, y: 16.658405}
-      - {x: -41.04279, y: 16.66027}
-      - {x: -41.04276, y: 16.658398}
-      - {x: -38.765007, y: 16.658405}
-      - {x: -38.752766, y: 16.669151}
-      - {x: -38.752792, y: 18.011913}
-      - {x: -38.88307, y: 18.01195}
-      - {x: -38.749424, y: 18.853907}
-      - {x: -38.749435, y: 19.745514}
-      - {x: -39.141308, y: 20.014061}
-      - {x: -50.16167, y: 20.014032}
-      - {x: -50.1617, y: 18.011913}
-      - {x: -50.16278, y: 18.011885}
-      - {x: -50.162754, y: 16.658398}
-    - - {x: -27.365019, y: 16.658398}
-      - {x: -27.362783, y: 16.66027}
-      - {x: -27.362755, y: 16.658398}
-      - {x: -25.085003, y: 16.658405}
+    - - {x: -25.085022, y: 16.658398}
       - {x: -25.082783, y: 16.660275}
       - {x: -25.082754, y: 16.658398}
       - {x: -22.805002, y: 16.658405}
@@ -18026,9 +17988,29 @@ CompositeCollider2D:
       - {x: -29.264273, y: 20.014057}
       - {x: -29.643898, y: 19.831427}
       - {x: -29.643898, y: 18.134176}
-      - {x: -29.632315, y: 18.011913}
-      - {x: -29.64278, y: 18.011885}
-      - {x: -29.642752, y: 16.658398}
+      - {x: -29.631622, y: 18.005272}
+      - {x: -27.362783, y: 18.005243}
+      - {x: -27.362755, y: 16.658398}
+    - - {x: -47.88502, y: 16.658398}
+      - {x: -47.882782, y: 16.660276}
+      - {x: -47.88275, y: 16.658398}
+      - {x: -45.605007, y: 16.658405}
+      - {x: -45.602783, y: 16.660275}
+      - {x: -45.602757, y: 16.658398}
+      - {x: -43.325, y: 16.658405}
+      - {x: -43.322784, y: 16.660273}
+      - {x: -43.322754, y: 16.658398}
+      - {x: -41.045006, y: 16.658405}
+      - {x: -41.032764, y: 16.669151}
+      - {x: -41.032738, y: 18.005272}
+      - {x: -38.88413, y: 18.005297}
+      - {x: -38.749424, y: 18.853907}
+      - {x: -38.749435, y: 19.745514}
+      - {x: -39.141308, y: 20.014061}
+      - {x: -50.16167, y: 20.014032}
+      - {x: -50.1617, y: 18.011913}
+      - {x: -50.16278, y: 18.011885}
+      - {x: -50.162754, y: 16.658398}
     - - {x: 50.035843, y: 14.005272}
       - {x: 50.170578, y: 14.853906}
       - {x: 50.170567, y: 15.745514}
@@ -19423,26 +19405,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -18, y: 8, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -13, y: 8, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -12, y: 8, z: 0}
     second:
       serializedVersion: 2
@@ -19761,7 +19723,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 236f0a0085c3a5a418541f18a6dea20f, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: ee5140425587e2d44b9d1d06e1d3e3cb, type: 2}
-  - m_RefCount: 18
+  - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: f58b29057fd7fe54faacb4aa34512d4d, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 2
@@ -19780,10 +19742,10 @@ Tilemap:
     m_Data: {fileID: 750809307, guid: e56b56035f49db6488e72aa20b95565e, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1763501364, guid: e56b56035f49db6488e72aa20b95565e, type: 3}
-  - m_RefCount: 18
+  - m_RefCount: 16
     m_Data: {fileID: 750360259, guid: e56b56035f49db6488e72aa20b95565e, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 143
+  - m_RefCount: 141
     m_Data:
       e00: 1
       e01: 0
@@ -19856,7 +19818,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 145
+  - m_RefCount: 143
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -22009,7 +21971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 980115314}
   - component: {fileID: 980115315}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_18 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26952,7 +26914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1256828466}
   - component: {fileID: 1256828467}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_10 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27696,7 +27658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1354322767}
   - component: {fileID: 1354322768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_18 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27783,7 +27745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1360366627}
   - component: {fileID: 1360366628}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28800,7 +28762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1456775307}
   - component: {fileID: 1456775308}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_10 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29417,8 +29379,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278236139
+  m_fontColor: {r: 0.9215687, g: 0.7019608, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -30137,7 +30099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617221779}
   - component: {fileID: 1617221780}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_10 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30889,7 +30851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1649669068}
   - component: {fileID: 1649669069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_10 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32458,7 +32420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13, y: 313}
+  m_AnchoredPosition: {x: -13, y: 235}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1797236660
@@ -32500,8 +32462,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278236139
+  m_fontColor: {r: 0.9215687, g: 0.7019608, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -32572,7 +32534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810879043}
   - component: {fileID: 1810879044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tileset copia_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34190,7 +34152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2075007581}
   - component: {fileID: 2075007582}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: escalera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
