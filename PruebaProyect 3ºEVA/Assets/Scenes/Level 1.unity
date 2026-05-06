@@ -14138,7 +14138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680b97acd8a1b0049b1010846bdd13bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Pulsa E / B para cambiar de POLARIDAD
+  message: Press E / B to change POLARITY
   offsetY: 1.5
   fadeDuration: 0.3
   hintPanel: {fileID: 46825158}
