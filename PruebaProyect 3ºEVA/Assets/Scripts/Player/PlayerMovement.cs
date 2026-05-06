@@ -60,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            AudioManager.instance.PlayJump(gameObject.name);
         }
     }
 

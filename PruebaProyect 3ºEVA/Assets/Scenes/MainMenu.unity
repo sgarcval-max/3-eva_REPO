@@ -1734,7 +1734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &655985845
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3905,9 +3905,9 @@ MonoBehaviour:
   musicSource: {fileID: 1111547619}
   sfxSource: {fileID: 965768084}
   mainMenuMusic: {fileID: 8300000, guid: 288a87c591d9c2d4da55f7c1f7eb6e3d, type: 3}
-  level1Music: {fileID: 8300000, guid: 135d4618816a91048b74c3fd2d2fc591, type: 3}
-  level2Music: {fileID: 8300000, guid: 17fe80ec681040740ae666e93d99b9c6, type: 3}
-  level3Music: {fileID: 8300000, guid: c1fd59d62a400b341bd55194d112f1b5, type: 3}
+  level1Music: {fileID: 8300000, guid: 6932ef12323d63d47a703882cd20c26b, type: 3}
+  level2Music: {fileID: 8300000, guid: a1f1fb73728cf8348ae836d8403f394f, type: 3}
+  level3Music: {fileID: 8300000, guid: 5cda46edde05a544f8818a304d8c8b14, type: 3}
   levelCompleteMusic: {fileID: 8300000, guid: 4e501b03550e31d42b1086375c9f26cc, type: 3}
   gameCompleteMusic: {fileID: 8300000, guid: 900c669eb9274014885cba70de6d2347, type: 3}
   gameOverMusic: {fileID: 8300000, guid: fb6493b23a59a9a4a9c80cbed44ed2a4, type: 3}
@@ -3916,6 +3916,8 @@ MonoBehaviour:
   buttonHoverSFX: {fileID: 8300000, guid: 1bf8afed9171e2c488332b01dec3cb98, type: 3}
   deathSFX: {fileID: 8300000, guid: 388ab1274ee1ebd41a704fb7ae99465d, type: 3}
   respawnSFX: {fileID: 0}
+  jumpPlayer1SFX: {fileID: 8300000, guid: 0e92676db2f38864b8599185518c18dc, type: 3}
+  jumpPlayer2SFX: {fileID: 8300000, guid: 0e92676db2f38864b8599185518c18dc, type: 3}
 --- !u!4 &1254141934
 Transform:
   m_ObjectHideFlags: 0

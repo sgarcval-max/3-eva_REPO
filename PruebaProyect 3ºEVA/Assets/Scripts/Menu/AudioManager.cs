@@ -27,6 +27,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip buttonHoverSFX;
     public AudioClip deathSFX;
     public AudioClip respawnSFX;
+    public AudioClip jumpPlayer1SFX;  // Salto Player 1
+    public AudioClip jumpPlayer2SFX;  // Salto Player 2
 
     private void Awake()
     {
@@ -152,6 +154,14 @@ public class AudioManager : MonoBehaviour
     {
         if (respawnSFX != null)
             sfxSource.PlayOneShot(respawnSFX);
+    }
+
+    public void PlayJump(string playerName)
+    {
+        if (playerName == "Player1" && jumpPlayer1SFX != null)
+            sfxSource.PlayOneShot(jumpPlayer1SFX);
+        else if (playerName == "Player2" && jumpPlayer2SFX != null)
+            sfxSource.PlayOneShot(jumpPlayer2SFX);
     }
 
     public void SetMusicVolume(float value)
