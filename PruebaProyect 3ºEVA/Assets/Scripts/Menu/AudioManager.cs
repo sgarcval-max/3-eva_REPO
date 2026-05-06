@@ -27,8 +27,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip buttonHoverSFX;
     public AudioClip deathSFX;
     public AudioClip respawnSFX;
-    public AudioClip jumpPlayer1SFX;  // Salto Player 1
-    public AudioClip jumpPlayer2SFX;  // Salto Player 2
+    public AudioClip jumpPlayer1SFX;
+    public AudioClip jumpPlayer2SFX;
+    public AudioClip polarityPositiveSFX;
+    public AudioClip polarityNegativeSFX;
 
     private void Awake()
     {
@@ -162,6 +164,18 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(jumpPlayer1SFX);
         else if (playerName == "Player2" && jumpPlayer2SFX != null)
             sfxSource.PlayOneShot(jumpPlayer2SFX);
+    }
+
+    public void PlayPolarityPositive()
+    {
+        if (polarityPositiveSFX != null)
+            sfxSource.PlayOneShot(polarityPositiveSFX);
+    }
+
+    public void PlayPolarityNegative()
+    {
+        if (polarityNegativeSFX != null)
+            sfxSource.PlayOneShot(polarityNegativeSFX);
     }
 
     public void SetMusicVolume(float value)

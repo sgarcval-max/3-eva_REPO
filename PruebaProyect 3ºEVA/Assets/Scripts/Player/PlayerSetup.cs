@@ -6,8 +6,8 @@ public class PlayerSetup : MonoBehaviour
     public bool isPositive = true;
 
     [Header("Sprites de polaridad")]
-    public Sprite positiveSprite;  // Imagen cuando es positivo
-    public Sprite negativeSprite;  // Imagen cuando es negativo
+    public Sprite positiveSprite;
+    public Sprite negativeSprite;
 
     private SpriteRenderer sr;
 
@@ -22,6 +22,11 @@ public class PlayerSetup : MonoBehaviour
         if (!context.performed) return;
         isPositive = !isPositive;
         UpdateSprite();
+
+        if (isPositive)
+            AudioManager.instance.PlayPolarityPositive();
+        else
+            AudioManager.instance.PlayPolarityNegative();
     }
 
     void UpdateSprite()

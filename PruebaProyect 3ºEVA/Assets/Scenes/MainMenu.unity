@@ -3918,6 +3918,8 @@ MonoBehaviour:
   respawnSFX: {fileID: 0}
   jumpPlayer1SFX: {fileID: 8300000, guid: 0e92676db2f38864b8599185518c18dc, type: 3}
   jumpPlayer2SFX: {fileID: 8300000, guid: 0e92676db2f38864b8599185518c18dc, type: 3}
+  polarityPositiveSFX: {fileID: 8300000, guid: ff088f45ab8277540bc5bf622af5215a, type: 3}
+  polarityNegativeSFX: {fileID: 8300000, guid: ff088f45ab8277540bc5bf622af5215a, type: 3}
 --- !u!4 &1254141934
 Transform:
   m_ObjectHideFlags: 0
