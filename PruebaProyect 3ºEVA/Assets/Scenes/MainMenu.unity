@@ -3905,9 +3905,9 @@ MonoBehaviour:
   musicSource: {fileID: 1111547619}
   sfxSource: {fileID: 965768084}
   mainMenuMusic: {fileID: 8300000, guid: 288a87c591d9c2d4da55f7c1f7eb6e3d, type: 3}
-  level1Music: {fileID: 8300000, guid: 99248fcd12b044f42a82bfb7b03a8c79, type: 3}
-  level2Music: {fileID: 8300000, guid: 46484abf29b0baa4baf6c87ed865b695, type: 3}
-  level3Music: {fileID: 8300000, guid: bde1cd42422593240bd35c8b51609424, type: 3}
+  level1Music: {fileID: 8300000, guid: 135d4618816a91048b74c3fd2d2fc591, type: 3}
+  level2Music: {fileID: 8300000, guid: 17fe80ec681040740ae666e93d99b9c6, type: 3}
+  level3Music: {fileID: 8300000, guid: c1fd59d62a400b341bd55194d112f1b5, type: 3}
   levelCompleteMusic: {fileID: 8300000, guid: 4e501b03550e31d42b1086375c9f26cc, type: 3}
   gameCompleteMusic: {fileID: 8300000, guid: 900c669eb9274014885cba70de6d2347, type: 3}
   gameOverMusic: {fileID: 8300000, guid: fb6493b23a59a9a4a9c80cbed44ed2a4, type: 3}
